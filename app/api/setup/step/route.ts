@@ -88,7 +88,7 @@ export async function POST(request: NextRequest) {
     if (consent !== 'on' && consent !== 'off') {
       return NextResponse.json({ error: 'telemetryConsent must be "on" or "off"' }, { status: 400 });
     }
-    // A BULWARK_TELEMETRY env var hard-locks the choice; don't fight it.
+    // A NUWAMAIL_TELEMETRY env var hard-locks the choice; don't fight it.
     const { source } = await effectiveConsent();
     if (source !== 'env') {
       const tstate = await loadState();

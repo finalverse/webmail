@@ -29,7 +29,7 @@ export function notifyParent(type: string, payload: Record<string, unknown> = {}
   if (!PARENT_ORIGIN) return;
 
   try {
-    window.parent.postMessage({ source: 'bulwark', type, ...payload }, PARENT_ORIGIN);
+    window.parent.postMessage({ source: 'nuwamail', type, ...payload }, PARENT_ORIGIN);
   } catch {
     // Cross-origin postMessage may fail in restricted contexts
   }

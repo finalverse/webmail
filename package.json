@@ -1,16 +1,16 @@
 {
-  "name": "bulwark-webmail",
+  "name": "nuwamail-webmail",
   "version": "1.7.6",
-  "description": "Bulwark Webmail - a modern webmail client built for Stalwart Mail Server",
-  "author": "Bulwark Webmail <bulwark@rbm.systems>",
+  "description": "NuwaMail - a modern webmail client built for the NuwaMail mail server",
+  "author": "NuwaMail <hello@nuwamail.com>",
   "license": "AGPL-3.0-only",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bulwarkmail/webmail.git"
+    "url": "git+https://github.com/finalverse/webmail.git"
   },
-  "homepage": "https://github.com/bulwarkmail/webmail",
+  "homepage": "https://github.com/finalverse/webmail",
   "bugs": {
-    "url": "https://github.com/bulwarkmail/webmail/issues"
+    "url": "https://github.com/finalverse/webmail/issues"
   },
   "keywords": [
     "jmap",

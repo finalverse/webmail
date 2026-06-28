@@ -110,13 +110,13 @@ const emails: MockEmail[] = [
     id: 'email-001', threadId: 'thread-001', mailboxIds: { 'mb-inbox': true }, keywords: {}, size: 4200, receivedAt: daysAgo(0),
     from: [{ name: 'Sophie Example', email: 'sophie@eurotech.example' }],
     to: [{ name: 'Dev User', email: 'dev@localhost' }], cc: [],
-    subject: 'Willkommen bei Bulwark Webmail!',
-    preview: 'Hallo! Welcome to Bulwark - a modern, open-source webmail client for Stalwart Mail Server, built fresh on JMAP.',
+    subject: 'Willkommen bei NuwaMail!',
+    preview: 'Hallo! Welcome to NuwaMail - a modern, open-source webmail client for Stalwart Mail Server, built fresh on JMAP.',
     hasAttachment: false,
     textBody: [{ partId: 'p1', blobId: 'blob-001', size: 2200, type: 'text/plain' }],
     htmlBody: [],
     bodyValues: {
-      p1: { value: 'Hallo!\n\nWelcome to Bulwark - a modern, open-source webmail client for Stalwart Mail Server, built fresh on the JMAP protocol. No PHP, no 2008 architecture, no plugin-of-plugins archaeology; just clean TypeScript and Next.js, instant push, and a UI that feels like a native app instead of a Gmail polyfill.\n\nWhy JMAP matters: one TLS connection instead of long-polling, push notifications the moment new mail arrives, batched mutations so a click never waits on three round-trips, and threading stitched on the server rather than reassembled in the browser. The result is a webmail that feels quick on a flaky train Wi-Fi and quicker on fibre.\n\nMail, calendar, contacts, and files - everything Stalwart already serves, surfaced through a single window. Threaded inbox with full-text search and Sieve filters. Month, week, day and agenda views with recurring events and iMIP invitations. Multiple address books with vCard import and export. File previews backed by Stalwart\'s JMAP FileNode storage. S/MIME, templates, keyboard shortcuts, dark mode, dozens of languages - the boring stuff that should just work, working.\n\nTwo containers behind your reverse proxy of choice is all it takes to host it yourself: Stalwart for the server side, Bulwark for the client. Caddy, Traefik, nginx - pick one, there are working examples for each. Stalwart stays the source of truth, Bulwark is what you point your browser at, and the setup wizard handles the parts that would otherwise live in a config file.\n\nIt is AGPL, the codebase is small enough to read in an afternoon, and the extension directory already hosts a growing collection of plugins and themes. If something is missing, you can fork it, file an issue, or send a patch - a person will read it.\n\nBeste Grüße,\nSophie' },
+      p1: { value: 'Hallo!\n\nWelcome to NuwaMail - a modern, open-source webmail client for Stalwart Mail Server, built fresh on the JMAP protocol. No PHP, no 2008 architecture, no plugin-of-plugins archaeology; just clean TypeScript and Next.js, instant push, and a UI that feels like a native app instead of a Gmail polyfill.\n\nWhy JMAP matters: one TLS connection instead of long-polling, push notifications the moment new mail arrives, batched mutations so a click never waits on three round-trips, and threading stitched on the server rather than reassembled in the browser. The result is a webmail that feels quick on a flaky train Wi-Fi and quicker on fibre.\n\nMail, calendar, contacts, and files - everything Stalwart already serves, surfaced through a single window. Threaded inbox with full-text search and Sieve filters. Month, week, day and agenda views with recurring events and iMIP invitations. Multiple address books with vCard import and export. File previews backed by Stalwart\'s JMAP FileNode storage. S/MIME, templates, keyboard shortcuts, dark mode, dozens of languages - the boring stuff that should just work, working.\n\nTwo containers behind your reverse proxy of choice is all it takes to host it yourself: Stalwart for the server side, NuwaMail for the client. Caddy, Traefik, nginx - pick one, there are working examples for each. Stalwart stays the source of truth, NuwaMail is what you point your browser at, and the setup wizard handles the parts that would otherwise live in a config file.\n\nIt is AGPL, the codebase is small enough to read in an afternoon, and the extension directory already hosts a growing collection of plugins and themes. If something is missing, you can fork it, file an issue, or send a patch - a person will read it.\n\nBeste Grüße,\nSophie' },
     },
   },
   {
@@ -155,7 +155,7 @@ const emails: MockEmail[] = [
     id: 'email-004', threadId: 'thread-004', mailboxIds: { 'mb-inbox': true }, keywords: { '$label:red': true }, size: 6200, receivedAt: daysAgo(0),
     from: [{ name: 'GitHub Notifications', email: 'notifications@github.com' }],
     to: [{ name: 'Dev User', email: 'dev@localhost' }], cc: [],
-    subject: '[bulwark-webmail] New issue: Add dark mode toggle (#42)',
+    subject: '[nuwamail-webmail] New issue: Add dark mode toggle (#42)',
     preview: 'A new issue has been opened by @contributor. It would be great to have a dark mode toggle in the settings panel.',
     hasAttachment: false,
     textBody: [{ partId: 'p1', blobId: 'blob-007', size: 350, type: 'text/plain' }],
@@ -237,8 +237,8 @@ const emails: MockEmail[] = [
     textBody: [{ partId: 'p1', blobId: 'blob-034', size: 380, type: 'text/plain' }],
     htmlBody: [{ partId: 'p2', blobId: 'blob-035', size: 520, type: 'text/html' }],
     bodyValues: {
-      p1: { value: 'Salut,\n\nI just pushed the contact vCard import feature (JMAP-342). Could you review when you get a chance?\n\nPR: https://github.example/bulwark-webmail/pull/342\n\nKey changes:\n- New vCard parser with v3/v4 support\n- Batch import with progress indicator\n- Duplicate detection and merge UI\n- Unit tests for edge cases\n\nMerci d\'avance,\nÉlise' },
-      p2: { value: '<p>Salut,</p><p>I just pushed the contact vCard import feature (<code>JMAP-342</code>). Could you review when you get a chance?</p><p>PR: <a href="#">bulwark-webmail/pull/342</a></p><h4>Key changes:</h4><ul><li>New vCard parser with v3/v4 support</li><li>Batch import with progress indicator</li><li>Duplicate detection and merge UI</li><li>Unit tests for edge cases</li></ul><p>Merci d\'avance,<br>Élise</p>' },
+      p1: { value: 'Salut,\n\nI just pushed the contact vCard import feature (JMAP-342). Could you review when you get a chance?\n\nPR: https://github.example/nuwamail-webmail/pull/342\n\nKey changes:\n- New vCard parser with v3/v4 support\n- Batch import with progress indicator\n- Duplicate detection and merge UI\n- Unit tests for edge cases\n\nMerci d\'avance,\nÉlise' },
+      p2: { value: '<p>Salut,</p><p>I just pushed the contact vCard import feature (<code>JMAP-342</code>). Could you review when you get a chance?</p><p>PR: <a href="#">nuwamail-webmail/pull/342</a></p><h4>Key changes:</h4><ul><li>New vCard parser with v3/v4 support</li><li>Batch import with progress indicator</li><li>Duplicate detection and merge UI</li><li>Unit tests for edge cases</li></ul><p>Merci d\'avance,<br>Élise</p>' },
     },
   },
   {
@@ -408,7 +408,7 @@ const emails: MockEmail[] = [
     textBody: [{ partId: 'p1', blobId: 'blob-063', size: 350, type: 'text/plain' }],
     htmlBody: [],
     bodyValues: {
-      p1: { value: '¡Hola!\n\nThe new brand guidelines are finalized. Key updates:\n\n- Primary color shifted to #7c3aed (from #6366f1)\n- New typography scale (Inter for body, Cal Sans for headings)\n- Updated icon set (Lucide → custom icon font)\n- Dark mode color tokens added\n\nI\'ve also updated the Figma component library. Link: figma.example/bulwark-webmail-v2\n\nBrand guidelines PDF attached.\n\nMaría' },
+      p1: { value: '¡Hola!\n\nThe new brand guidelines are finalized. Key updates:\n\n- Primary color shifted to #7c3aed (from #6366f1)\n- New typography scale (Inter for body, Cal Sans for headings)\n- Updated icon set (Lucide → custom icon font)\n- Dark mode color tokens added\n\nI\'ve also updated the Figma component library. Link: figma.example/nuwamail-webmail-v2\n\nBrand guidelines PDF attached.\n\nMaría' },
     },
     attachments: [
       { partId: 'att10', blobId: 'blob-att-010', size: 3200000, name: 'Markenrichtlinien-v2.pdf', type: 'application/pdf' },
@@ -431,14 +431,14 @@ const emails: MockEmail[] = [
     id: 'email-039', threadId: 'thread-034', mailboxIds: { 'mb-inbox': true }, keywords: {}, size: 3400, receivedAt: hoursAgo(0.25),
     from: [{ name: 'CI/CD Pipeline', email: 'ci@github.example' }],
     to: [{ name: 'Dev User', email: 'dev@localhost' }], cc: [],
-    subject: '❌ Build failed: main - bulwark-webmail #1337',
+    subject: '❌ Build failed: main - nuwamail-webmail #1337',
     preview: 'Build #1337 on branch main failed. 2 test(s) failed in email-sanitization.test.ts.',
     hasAttachment: false,
     textBody: [{ partId: 'p1', blobId: 'blob-060', size: 450, type: 'text/plain' }],
     htmlBody: [{ partId: 'p2', blobId: 'blob-061', size: 600, type: 'text/html' }],
     bodyValues: {
-      p1: { value: '❌ Build #1337 FAILED\n\nRepository: bulwark-webmail\nBranch: main\nCommit: a3f9c21 "fix: sanitize CSS in email body"\nTriggered by: @elise-moreau\n\nFailed tests:\n  ✗ email-sanitization.test.ts > should strip javascript: URLs\n  ✗ email-sanitization.test.ts > should handle nested style tags\n\nPassed: 247 | Failed: 2 | Skipped: 0\nDuration: 42.0s\n\nView full logs: https://github.example/bulwark-webmail/actions/runs/1337' },
-      p2: { value: '<h3>❌ Build #1337 FAILED</h3><table><tr><td>Repository</td><td>bulwark-webmail</td></tr><tr><td>Branch</td><td><code>main</code></td></tr><tr><td>Commit</td><td><code>a3f9c21</code> "fix: sanitize CSS in email body"</td></tr></table><h4>Failed tests:</h4><ul><li>❌ <code>email-sanitization.test.ts</code> &gt; should strip javascript: URLs</li><li>❌ <code>email-sanitization.test.ts</code> &gt; should handle nested style tags</li></ul><p><strong>Passed: 247</strong> | <strong style="color:red">Failed: 2</strong> | Skipped: 0</p>' },
+      p1: { value: '❌ Build #1337 FAILED\n\nRepository: nuwamail-webmail\nBranch: main\nCommit: a3f9c21 "fix: sanitize CSS in email body"\nTriggered by: @elise-moreau\n\nFailed tests:\n  ✗ email-sanitization.test.ts > should strip javascript: URLs\n  ✗ email-sanitization.test.ts > should handle nested style tags\n\nPassed: 247 | Failed: 2 | Skipped: 0\nDuration: 42.0s\n\nView full logs: https://github.example/nuwamail-webmail/actions/runs/1337' },
+      p2: { value: '<h3>❌ Build #1337 FAILED</h3><table><tr><td>Repository</td><td>nuwamail-webmail</td></tr><tr><td>Branch</td><td><code>main</code></td></tr><tr><td>Commit</td><td><code>a3f9c21</code> "fix: sanitize CSS in email body"</td></tr></table><h4>Failed tests:</h4><ul><li>❌ <code>email-sanitization.test.ts</code> &gt; should strip javascript: URLs</li><li>❌ <code>email-sanitization.test.ts</code> &gt; should handle nested style tags</li></ul><p><strong>Passed: 247</strong> | <strong style="color:red">Failed: 2</strong> | Skipped: 0</p>' },
     },
   },
   // =====================================================================
@@ -741,8 +741,8 @@ const IDENTITIES: MockIdentity[] = [
     email: 'dev@localhost',
     replyTo: null,
     bcc: null,
-    textSignature: 'Dev User\nBulwark Webmail Developer',
-    htmlSignature: '<p>Dev User<br><em>Bulwark Webmail Developer</em></p>',
+    textSignature: 'Dev User\nNuwaMail Developer',
+    htmlSignature: '<p>Dev User<br><em>NuwaMail Developer</em></p>',
     mayDelete: false,
   },
 ];

@@ -141,18 +141,18 @@
   },
   "protocol_handlers": {
     "title": "Noklusējuma lietotnes",
-    "description": "Izvēlieties, vai e-pasta un kalendāra saites atvērt Bulwark. Tehniski Bulwark reģistrējas kā protokola apstrādātājs mailto: un webcal: saitēm.",
+    "description": "Izvēlieties, vai e-pasta un kalendāra saites atvērt NuwaMail. Tehniski NuwaMail reģistrējas kā protokola apstrādātājs mailto: un webcal: saitēm.",
     "unsupported": "Šī pārlūkprogramma vai savienojums neatbalsta manuālu protokola apstrādātāja reģistrāciju. Iespējams, instalēto PWA joprojām var izmantot pārlūkprogrammas vai sistēmas iestatījumos.",
     "mailto_label": "E-pasta saites",
-    "mailto_description": "Atver mailto: saites Bulwark ar iepriekš aizpildītu ziņojuma redaktoru.",
+    "mailto_description": "Atver mailto: saites NuwaMail ar iepriekš aizpildītu ziņojuma redaktoru.",
     "protocol_open_mode_label": "Atverot protokola saites",
-    "protocol_open_mode_description": "Izvēlieties, vai Bulwark atver mailto: un webcal: saites jaunā cilnē vai atkārtoti izmanto atvērtu sesiju. Aktīvās sesijas opcijai nepieciešama paziņojumu atļauja, lai jūs varētu noklikšķināt uz rezerves paziņojuma un izcelt Bulwark priekšplānā, ja pārlūkprogramma bloķē fokusu.",
+    "protocol_open_mode_description": "Izvēlieties, vai NuwaMail atver mailto: un webcal: saites jaunā cilnē vai atkārtoti izmanto atvērtu sesiju. Aktīvās sesijas opcijai nepieciešama paziņojumu atļauja, lai jūs varētu noklikšķināt uz rezerves paziņojuma un izcelt NuwaMail priekšplānā, ja pārlūkprogramma bloķē fokusu.",
     "protocol_open_mode_active_session": "Ja iespējams, atvērt aktīvajā sesijā",
     "protocol_open_mode_new_tab": "Vienmēr atvērt jaunu cilni",
-    "focus_notification_title": "Atvērt Bulwark",
-    "focus_notification_body": "Saite tika atvērta Bulwark. Noklikšķiniet, lai izceltu logu priekšplānā.",
+    "focus_notification_title": "Atvērt NuwaMail",
+    "focus_notification_body": "Saite tika atvērta NuwaMail. Noklikšķiniet, lai izceltu logu priekšplānā.",
     "webcal_label": "Kalendāra saites",
-    "webcal_description": "Atver webcal: saites Bulwark ar iepriekš aizpildītu kalendāra abonēšanas dialogu.",
+    "webcal_description": "Atver webcal: saites NuwaMail ar iepriekš aizpildītu kalendāra abonēšanas dialogu.",
     "register_mailto": "Reģistrēt e-pasta lietotni",
     "register_webcal": "Reģistrēt kalendāra lietotni",
     "mailto_registered": "E-pasta apstrādātāja reģistrācija pieprasīta",
@@ -160,7 +160,7 @@
     "registration_failed": "Protokola apstrādātāja reģistrācija neizdevās",
     "opening_mailto": "Tiek atvērts redaktors...",
     "opening_webcal": "Tiek atvērts kalendārs...",
-    "browser_note": "Pārlūkprogramma vai operētājsistēma var lūgt apstiprinājumu un var prasīt, lai Bulwark būtu instalēts, pirms to var izvēlēties kā noklusējuma lietotni.",
+    "browser_note": "Pārlūkprogramma vai operētājsistēma var lūgt apstiprinājumu un var prasīt, lai NuwaMail būtu instalēts, pirms to var izvēlēties kā noklusējuma lietotni.",
     "select_account_title": "Izvēlieties kontu",
     "select_mailto_account": "Izvēlieties, kurā kontā atvērt šo e-pasta saiti.",
     "select_webcal_account": "Izvēlieties, kurā kontā atvērt šo kalendāra saiti.",
@@ -701,9 +701,9 @@
     "app_title": "Tīmekļa pasts",
     "reconnecting": "Savienojums pārtraukts. Mēģina izveidot savienojumu...",
     "rate_limited_title": "Autentifikācija serverī ir īslaicīgi ierobežota.",
-    "rate_limited_detail": "Bulwark ir apturējis fonā veiktos pieprasījumus, lai izvairītos no bloķēšanas. Mēģinās vēlreiz pēc {seconds} s.",
+    "rate_limited_detail": "NuwaMail ir apturējis fonā veiktos pieprasījumus, lai izvairītos no bloķēšanas. Mēģinās vēlreiz pēc {seconds} s.",
     "rate_limited_action_title": "Pieprasījums apturēts, lai izvairītos no bloķēšanas.",
-    "rate_limited_action_detail": "Bulwark gaida servera noildzes beigas pirms jaunu autentificētu pieprasījumu sūtīšanas. Mēģiniet vēlreiz pēc {seconds} s."
+    "rate_limited_action_detail": "NuwaMail gaida servera noildzes beigas pirms jaunu autentificētu pieprasījumu sūtīšanas. Mēģiniet vēlreiz pēc {seconds} s."
   },
   "notifications": {
     "email_sent": "Vēstule veiksmīgi nosūtīta",
@@ -1007,12 +1007,12 @@
       "push": {
         "confirm_disable_message": "Šī ierīce vairs nesaņems brīdinājumus, kad vietne būs aizvērta.",
         "confirm_disable_title": "Atspējot fona paziņojumus?",
-        "description": "Saņem sistēmas paziņojumus par jaunu pastu, kad šī vietne ir aizvērta. Piegādāts caur Bulwark push releju; relejs nekad neredz pasta saturu.",
+        "description": "Saņem sistēmas paziņojumus par jaunu pastu, kad šī vietne ir aizvērta. Piegādāts caur NuwaMail push releju; relejs nekad neredz pasta saturu.",
         "disable": "Atspējot",
         "enable": "Iespējot",
         "ios_hint": "Operētājsistēmā iOS vispirms instalējiet vietni sākuma ekrānā – Safari piegādā Web Push tikai instalētajām PWA.",
         "reenable": "Reģistrēt vēlreiz",
-        "relay_desc": "Pēc noklusējuma izmanto izmitināto Bulwark releju. Mainiet tikai tad, ja izmitināt pats.",
+        "relay_desc": "Pēc noklusējuma izmanto izmitināto NuwaMail releju. Mainiet tikai tad, ja izmitināt pats.",
         "relay_label": "Push relejs",
         "relay_locked": "Iestatījis administrators",
         "relay_locked_desc": "Push releja URL ir iestatījis administrators, un to nevar mainīt.",
@@ -1442,10 +1442,10 @@
       },
       "link_device": {
         "title": "Saistīt mobilo lietotni",
-        "description": "Pierakstieties Bulwark Mail mobilajā lietotnē, neko nerakstot. Šeit izveidojiet QR kodu un noskenējiet to lietotnes pierakstīšanās ekrānā.",
+        "description": "Pierakstieties NuwaMail mobilajā lietotnē, neko nerakstot. Šeit izveidojiet QR kodu un noskenējiet to lietotnes pierakstīšanās ekrānā.",
         "generate": "Rādīt QR kodu",
         "regenerate": "Rādīt jaunu kodu",
-        "instructions": "Atveriet Bulwark Mail lietotni, pierakstīšanās ekrānā pieskarieties \"Skenēt QR kodu\" un pavērsiet kameru šeit.",
+        "instructions": "Atveriet NuwaMail lietotni, pierakstīšanās ekrānā pieskarieties \"Skenēt QR kodu\" un pavērsiet kameru šeit.",
         "expires_in": "Šī koda derīgums beigsies pēc {seconds} sekundēm. To var izmantot tikai vienu reizi.",
         "expired": "Šī koda derīgums ir beidzies.",
         "generating": "Ģenerē…",
@@ -1610,7 +1610,7 @@
         "contacts_description": "Kontaktu sinhronizācija, adrešu grāmatu darbības un uzticamie sūtītāji"
       },
       "about": {
-        "title": "Bulwark Webmail"
+        "title": "NuwaMail"
       }
     },
     "sidebar_apps": {
@@ -2920,7 +2920,7 @@
     "start_tour": "Sākt ekskursiju"
   },
   "demo_welcome": {
-    "title": "Laipni lūdzam Bulwark Mail",
+    "title": "Laipni lūdzam NuwaMail",
     "description": "Atklājiet pilnvērtīgu tīmekļa e-pasta klientu tieši pārlūkā. Visi dati tiek glabāti jūsu ierīcē.",
     "feature_email": "Vēstuļu lasīšana un rakstīšana",
     "feature_organize": "Etiķetes, zvaigznītes un mapes",
@@ -3035,7 +3035,7 @@
     "settings_folder_layout_inline": "Kopā ar failiem",
     "settings_folder_layout_sidebar": "Sānu josla",
     "disabled_title": "Failu funkciju ir atspējojis administrators",
-    "disabled_description": "Lielu failu augšupielāde, izmantojot WebDAV, var radīt Stalwart/RocksDB nestabilitāti, tostarp atmiņas izsīkumu un neatkopjamu diska izmantojumu. Dzēstie faili var netikt nekavējoties izņemti no blob glabātuves. Šī funkcija nav ieteicama produkcijas vidēm.",
+    "disabled_description": "Lielu failu augšupielāde, izmantojot WebDAV, var radīt NuwaMail/RocksDB nestabilitāti, tostarp atmiņas izsīkumu un neatkopjamu diska izmantojumu. Dzēstie faili var netikt nekavējoties izņemti no blob glabātuves. Šī funkcija nav ieteicama produkcijas vidēm.",
     "stability_warning": "Lielu failu augšupielāde var radīt servera nestabilitāti. Dzēstie faili var netikt nekavējoties izņemti no glabātuves. Lietojiet piesardzīgi.",
     "no_accounts": "Nav pievienotu kontu.",
     "open_folder_tree": "Atvērt mapju koku",

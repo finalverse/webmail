@@ -249,7 +249,7 @@
 - **Plugins**: Sync plugin slot iframe height with reported content height
 - **Plugins**: Use plugin slot offer snapshots for `useSyncExternalStore`
 - **Plugins**: Trust the directory version on marketplace install and update
-- **Filters**: Prevent duplication of Bulwark rules with literal braces in values
+- **Filters**: Prevent duplication of NuwaMail rules with literal braces in values
 - **Setup**: Defer setup wizard HTTP detection to avoid hydration mismatch
 - **Routing**: Anchor unmatched URLs into `main` so 404 renders
 - **Routing**: Respect server-resolved locale on first visit (#309)
@@ -542,11 +542,11 @@ First-launch web setup wizard. New installs no longer need to hand-edit `.env.lo
 
 ## 1.5.3 (2026-04-28)
 
-> **New:** Help shape Bulwark Webmail. Each instance now sends a lightweight daily heartbeat (version, platform, bucketed account counts, feature toggles - never message data or PII) so we can see which platforms and features actually get used and prioritize fixes where they matter most. You're in control: opt out any time from **Admin → Telemetry** or by setting `BULWARK_TELEMETRY=off`. Full schema in the [privacy notice](https://bulwarkmail.org/docs/legal/privacy/telemetry).
+> **New:** Help shape NuwaMail. Each instance now sends a lightweight daily heartbeat (version, platform, bucketed account counts, feature toggles - never message data or PII) so we can see which platforms and features actually get used and prioritize fixes where they matter most. You're in control: opt out any time from **Admin → Telemetry** or by setting `NUWAMAIL_TELEMETRY=off`. Full schema in the [privacy notice](https://nuwamail.com/docs/legal/privacy/telemetry).
 
 ### Features
 
-- **Telemetry**: Anonymous instance telemetry, on by default. Reports schema version, platform, bucketed account counts, and feature toggles only - disable from the admin UI, with `BULWARK_TELEMETRY=off`, or by clearing the endpoint
+- **Telemetry**: Anonymous instance telemetry, on by default. Reports schema version, platform, bucketed account counts, and feature toggles only - disable from the admin UI, with `NUWAMAIL_TELEMETRY=off`, or by clearing the endpoint
 - **Telemetry**: Track unique logins (HMAC'd per instance, 90-day retention) so the heartbeat can report bucketed account totals without storing usernames
 - **Plugins**: Theme API v2 with token compiler and skin slot
 - **Plugins**: Extension preview page and detailed extension info API
@@ -600,7 +600,7 @@ First-launch web setup wizard. New installs no longer need to hand-edit `.env.lo
 
 ### Breaking Changes
 
-- **Self-service portal now needs Stalwart 0.16+**: Stalwart dropped its self-service HTTP API in 0.16.0 and replaced it with JMAP. Bulwark Webmail only talks to the new JMAP endpoint, so the self-service portal (account settings, app passwords, API keys) requires Stalwart 0.16 or newer. `STALWART_API_URL` is deprecated, these actions go through the normal JMAP session.
+- **Self-service portal now needs Stalwart 0.16+**: Stalwart dropped its self-service HTTP API in 0.16.0 and replaced it with JMAP. NuwaMail only talks to the new JMAP endpoint, so the self-service portal (account settings, app passwords, API keys) requires Stalwart 0.16 or newer. `STALWART_API_URL` is deprecated, these actions go through the normal JMAP session.
 
 ### Features
 
@@ -644,7 +644,7 @@ First-launch web setup wizard. New installs no longer need to hand-edit `.env.lo
 
 Thank you for your donations:
 
-- _You? [Become a sponsor!](https://github.com/sponsors/bulwarkmail)_
+- _You? [Become a sponsor!](https://github.com/sponsors/nuwamail)_
 
 **One-time**
 
@@ -691,7 +691,7 @@ Thank you for your donations:
 
 **Monthly**
 
-- _You? [Become a sponsor!](https://github.com/sponsors/bulwarkmail)_
+- _You? [Become a sponsor!](https://github.com/sponsors/nuwamail)_
 
 ### Features
 
@@ -725,7 +725,7 @@ Thank you for your donations:
 
 **Monthly**
 
-- _You? [Become a sponsor!](https://github.com/sponsors/bulwarkmail)_
+- _You? [Become a sponsor!](https://github.com/sponsors/nuwamail)_
 
 ### Features
 
@@ -1105,7 +1105,7 @@ Thank you for your donations:
 - **i18n**: Added Dutch and Portuguese translations (now 8 languages)
 - **Docker**: Publish only to GHCR, remove Docker Hub
 - **DevOps**: Interactive setup script with dry-run option and JMAP server URL validation
-- **Branding**: New Bulwark Webmail identity with logo assets and light/dark mode support
+- **Branding**: New NuwaMail identity with logo assets and light/dark mode support
 
 ### Fixes
 

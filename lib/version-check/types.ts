@@ -22,4 +22,4 @@ export interface VersionCheckStateFile {
   status: UpdateStatus | null;
 }
 
-export const DEFAULT_VERSION_ENDPOINT = 'https://version.telemetry.bulwarkmail.org/';
+export const DEFAULT_VERSION_ENDPOINT = 'https://version.telemetry.nuwamail.com/';

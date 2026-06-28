@@ -169,8 +169,8 @@ function stripRuleForMetadata(r: FilterRule): Omit<FilterRule, 'origin' | 'origi
 
 export interface GenerateOptions {
   /**
-   * Require extensions used by external (non-Bulwark) rules that we must
-   * preserve in the top-level `require` directive. Duplicates with Bulwark's
+   * Require extensions used by external (non-NuwaMail) rules that we must
+   * preserve in the top-level `require` directive. Duplicates with NuwaMail's
    * own requires are deduplicated.
    */
   externalRequires?: string[];
@@ -181,17 +181,17 @@ export function generateScript(
   vacation?: VacationSieveConfig,
   options: GenerateOptions = {},
 ): string {
-  // Partition rules by origin. Treat missing origin as 'bulwark' for back-compat.
-  const bulwarkRules: FilterRule[] = [];
+  // Partition rules by origin. Treat missing origin as 'nuwamail' for back-compat.
+  const nuwamailRules: FilterRule[] = [];
   const externalRules: FilterRule[] = [];
   for (const r of rules) {
-    if (r.origin && r.origin !== 'bulwark') externalRules.push(r);
-    else bulwarkRules.push(r);
+    if (r.origin && r.origin !== 'nuwamail') externalRules.push(r);
+    else nuwamailRules.push(r);
   }
 
   const metadata: FilterMetadata = {
     version: 1,
-    rules: bulwarkRules.map(stripRuleForMetadata) as FilterRule[],
+    rules: nuwamailRules.map(stripRuleForMetadata) as FilterRule[],
   };
   if (vacation?.isEnabled) {
     metadata.vacation = vacation;
@@ -204,9 +204,9 @@ export function generateScript(
   lines.push('@metadata:end */');
   lines.push('');
 
-  const bulwarkRequires = computeRequires(bulwarkRules, vacation);
+  const nuwamailRequires = computeRequires(nuwamailRules, vacation);
   const externalRequires = options.externalRequires ?? [];
-  const allRequires = [...new Set([...bulwarkRequires, ...externalRequires])].sort();
+  const allRequires = [...new Set([...nuwamailRequires, ...externalRequires])].sort();
 
   if (allRequires.length > 0) {
     lines.push(`require [${allRequires.map(r => `"${r}"`).join(', ')}];`);
@@ -223,9 +223,9 @@ export function generateScript(
     lines.push(`vacation ${vacationParts.join(' ')};`);
   }
 
-  const enabledBulwarkRules = bulwarkRules.filter(r => r.enabled);
+  const enabledNuwaMailRules = nuwamailRules.filter(r => r.enabled);
 
-  for (const rule of enabledBulwarkRules) {
+  for (const rule of enabledNuwaMailRules) {
     if (rule.conditions.length === 0 || rule.actions.length === 0) {
       debug.warn('filters', `Skipping rule "${rule.name}": empty conditions or actions`);
       continue;
@@ -266,7 +266,7 @@ export function generateScript(
   // own leading comments and trailing whitespace from the source script.
   if (externalRules.length > 0) {
     lines.push('');
-    lines.push('# --- External rules (managed outside Bulwark) ---');
+    lines.push('# --- External rules (managed outside NuwaMail) ---');
     for (const ext of externalRules) {
       if (!ext.rawBlock) continue;
       lines.push(ext.rawBlock.replace(/\s+$/, ''));

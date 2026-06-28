@@ -141,18 +141,18 @@
   },
   "protocol_handlers": {
     "title": "Aplicații implicite",
-    "description": "Alegeți dacă linkurile către e-mail și calendar se deschid în Bulwark. Din punct de vedere tehnic, Bulwark se înregistrează ca gestionar de protocol pentru linkurile de tip mailto: și webcal:.",
+    "description": "Alegeți dacă linkurile către e-mail și calendar se deschid în NuwaMail. Din punct de vedere tehnic, NuwaMail se înregistrează ca gestionar de protocol pentru linkurile de tip mailto: și webcal:.",
     "unsupported": "Acest browser sau această conexiune nu acceptă înregistrarea manuală a gestionarului de protocoale. Este posibil să puteți utiliza totuși aplicația PWA instalată prin setările browserului sau ale sistemului de operare.",
     "mailto_label": "Linkuri din e-mail",
-    "mailto_description": "Deschideți linkurile „mailto:” în Bulwark cu o fereastră de redactare precompletată.",
+    "mailto_description": "Deschideți linkurile „mailto:” în NuwaMail cu o fereastră de redactare precompletată.",
     "protocol_open_mode_label": "La deschiderea linkurilor de protocol",
-    "protocol_open_mode_description": "Alegeți dacă Bulwark deschide linkurile mailto: și webcal: într-o filă nouă sau reutilizează o sesiune deschisă. Opțiunea „sesiune activă” necesită permisiunea de notificare, astfel încât să puteți face clic pe o notificare de rezervă pentru a aduce Bulwark în prim-plan dacă browserul blochează focalizarea.",
+    "protocol_open_mode_description": "Alegeți dacă NuwaMail deschide linkurile mailto: și webcal: într-o filă nouă sau reutilizează o sesiune deschisă. Opțiunea „sesiune activă” necesită permisiunea de notificare, astfel încât să puteți face clic pe o notificare de rezervă pentru a aduce NuwaMail în prim-plan dacă browserul blochează focalizarea.",
     "protocol_open_mode_active_session": "Deschideți într-o sesiune activă, dacă este posibil",
     "protocol_open_mode_new_tab": "Deschideți întotdeauna o filă nouă",
-    "focus_notification_title": "Deschideți Bulwark",
-    "focus_notification_body": "Linkul a fost deschis în Bulwark. Faceți clic pentru a aduce fereastra în prim-plan.",
+    "focus_notification_title": "Deschideți NuwaMail",
+    "focus_notification_body": "Linkul a fost deschis în NuwaMail. Faceți clic pentru a aduce fereastra în prim-plan.",
     "webcal_label": "Linkuri către calendar",
-    "webcal_description": "Deschideți linkurile webcal: din Bulwark cu o fereastră de dialog de abonare la calendar completată în prealabil.",
+    "webcal_description": "Deschideți linkurile webcal: din NuwaMail cu o fereastră de dialog de abonare la calendar completată în prealabil.",
     "register_mailto": "Înregistrați aplicația de e-mail",
     "register_webcal": "Înregistrați aplicația de calendar",
     "mailto_registered": "S-a solicitat înregistrarea unui gestionar de e-mail",
@@ -160,7 +160,7 @@
     "registration_failed": "Înregistrarea gestionarului de protocol a eșuat",
     "opening_mailto": "Se deschide fereastra de redactare...",
     "opening_webcal": "Se deschide calendarul...",
-    "browser_note": "Este posibil ca browserul sau sistemul de operare să vă solicite confirmarea acestei acțiuni și să necesite instalareBulwarkului înainte de a putea fi selectat ca aplicație implicită.",
+    "browser_note": "Este posibil ca browserul sau sistemul de operare să vă solicite confirmarea acestei acțiuni și să necesite instalareNuwaMailului înainte de a putea fi selectat ca aplicație implicită.",
     "select_account_title": "Alegeți contul",
     "select_mailto_account": "Alegeți contul în care să se deschidă acest link de e-mail.",
     "select_webcal_account": "Alegeți contul care ar trebui să deschidă acest link către calendar.",
@@ -701,9 +701,9 @@
     "app_title": "Webmail",
     "reconnecting": "Conexiune pierdută. Se încearcă reconectarea…",
     "rate_limited_title": "Autentificarea pe server este temporar limitată ca frecvență.",
-    "rate_limited_detail": "Bulwark A suspendat solicitările de fundal pentru a evita blocarea. Se va încerca din nou în câteva {seconds} s.",
+    "rate_limited_detail": "NuwaMail A suspendat solicitările de fundal pentru a evita blocarea. Se va încerca din nou în câteva {seconds} s.",
     "rate_limited_action_title": "Solicitarea a fost pusă în așteptare pentru a evita blocarea contului.",
-    "rate_limited_action_detail": "Bulwark Așteaptă încheierea perioadei de așteptare a serverului înainte de a trimite alte cereri autentificate. Încercați din nou în câteva {seconds}."
+    "rate_limited_action_detail": "NuwaMail Așteaptă încheierea perioadei de așteptare a serverului înainte de a trimite alte cereri autentificate. Încercați din nou în câteva {seconds}."
   },
   "notifications": {
     "email_sent": "E-mailul a fost trimis cu succes",
@@ -985,9 +985,9 @@
       },
       "push": {
         "title": "Notificări în fundal",
-        "description": "Primiți notificări de sistem pentru e-mailuri noi chiar și atunci când acest site este închis. Notificările sunt transmise prin intermediul serverului de push Bulwark; serverul nu vede niciodată conținutul e-mailurilor.",
+        "description": "Primiți notificări de sistem pentru e-mailuri noi chiar și atunci când acest site este închis. Notificările sunt transmise prin intermediul serverului de push NuwaMail; serverul nu vede niciodată conținutul e-mailurilor.",
         "relay_label": "Relay push",
-        "relay_desc": "Implicit este setat serverul de retransmitere găzduit Bulwark. Modificați această setare numai dacă utilizați un server propriu.",
+        "relay_desc": "Implicit este setat serverul de retransmitere găzduit NuwaMail. Modificați această setare numai dacă utilizați un server propriu.",
         "relay_locked": "Configurat de administrator",
         "relay_locked_desc": "Relay-ul push URL a fost configurat de administratorul dvs. și nu poate fi modificat.",
         "relay_placeholder": "https://notifications.relay.example.com",
@@ -1449,10 +1449,10 @@
       },
       "link_device": {
         "title": "Aplicație mobilă",
-        "description": "Conectați-vă la aplicația mobilă „Bulwark” fără a introduce nimic. Generați un cod QR aici și scanați-l din ecranul de conectare al aplicației.",
+        "description": "Conectați-vă la aplicația mobilă „NuwaMail” fără a introduce nimic. Generați un cod QR aici și scanați-l din ecranul de conectare al aplicației.",
         "generate": "Afișați codul QR",
         "regenerate": "Afișați un cod nou",
-        "instructions": "Deschideți aplicația „BulwarkMail”, atingeți „Scanează codul QR” pe ecranul de autentificare și îndreptați camera în această direcție.",
+        "instructions": "Deschideți aplicația „NuwaMail”, atingeți „Scanează codul QR” pe ecranul de autentificare și îndreptați camera în această direcție.",
         "expires_in": "Acest cod expiră în {seconds} secunde. Poate fi utilizat o singură dată.",
         "expired": "Acest cod a expirat.",
         "generating": "Se generează…",
@@ -1617,7 +1617,7 @@
         "button": "Import"
       },
       "about": {
-        "title": "Bulwark Webmail"
+        "title": "NuwaMail"
       }
     },
     "sidebar_apps": {
@@ -2943,7 +2943,7 @@
     "start_tour": "Începe turul"
   },
   "demo_welcome": {
-    "title": "Bine ați venit la Bulwark Mail",
+    "title": "Bine ați venit la NuwaMail",
     "description": "Explorați un client de e-mail web cu funcționalități complete – direct în browserul dvs. Toate datele rămân pe dispozitivul dvs., așa că nu ezitați să testați totul.",
     "feature_email": "Citiți și redactați e-mailuri",
     "feature_organize": "Etichete, stele și dosare",
@@ -3061,7 +3061,7 @@
     "settings_folder_layout_inline": "În text",
     "settings_folder_layout_sidebar": "Bara laterală",
     "disabled_title": "Funcția de fișiere este dezactivată de administratorul dvs.",
-    "disabled_description": "Încărcarea fișierelor de dimensiuni mari prin intermediul WebDAV poate provoca instabilitate în Stalwart /RocksDB, inclusiv blocări din cauza epuizării memoriei și utilizare irecuperabilă a spațiului pe disc. Este posibil ca fișierele șterse să nu fie eliminate imediat din spațiul de stocare blob. Această funcție nu este recomandată pentru mediile de producție.",
+    "disabled_description": "Încărcarea fișierelor de dimensiuni mari prin intermediul WebDAV poate provoca instabilitate în NuwaMail /RocksDB, inclusiv blocări din cauza epuizării memoriei și utilizare irecuperabilă a spațiului pe disc. Este posibil ca fișierele șterse să nu fie eliminate imediat din spațiul de stocare blob. Această funcție nu este recomandată pentru mediile de producție.",
     "stability_warning": "Încărcarea fișierelor de dimensiuni mari poate provoca instabilitatea serverului. Este posibil ca fișierele șterse să nu fie eliminate imediat din spațiul de stocare. Utilizați cu precauție.",
     "migration_title": "Se actualizează fișierele...",
     "migration_description": "Organizarea dosarelor și a fișierelor în structura corespunzătoare. Această operațiune se efectuează o singură dată."

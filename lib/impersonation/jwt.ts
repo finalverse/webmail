@@ -71,7 +71,7 @@ export function verifyImpersonationJwt(
   if (typeof secret !== 'string' || secret.length < MIN_SECRET_LENGTH) {
     throw new ImpersonationJwtError(
       'config',
-      `BULWARK_JWT_AUTH_SECRET must be at least ${MIN_SECRET_LENGTH} characters`,
+      `NUWAMAIL_JWT_AUTH_SECRET must be at least ${MIN_SECRET_LENGTH} characters`,
       500,
     );
   }
@@ -145,7 +145,7 @@ export function verifyImpersonationJwt(
 // deployment each pod has its own cache; that's acceptable because a token
 // stolen mid-flight could only be replayed against the pod that already
 // consumed it (and that pod will reject it). For stronger guarantees,
-// platforms can issue per-pod-routed tokens or front Bulwark with a
+// platforms can issue per-pod-routed tokens or front NuwaMail with a
 // single-leader load balancer for the impersonate route.
 
 const REPLAY_CACHE_MAX = 4096;

@@ -55,7 +55,7 @@ interface WizardConfig {
 }
 
 const EMPTY_CONFIG: WizardConfig = {
-  appName: 'Bulwark Webmail',
+  appName: 'NuwaMail',
   jmapServerUrl: '',
   stalwartFeaturesEnabled: true,
   jmapServers: [],
@@ -276,7 +276,7 @@ export default function SetupWizardPage() {
 function Header() {
   return (
     <div className="text-center mb-6">
-      <h1 className="text-2xl font-semibold">Bulwark Webmail Setup</h1>
+      <h1 className="text-2xl font-semibold">NuwaMail Setup</h1>
       <p className="text-sm text-muted-foreground mt-1">
         Configure your webmail instance from the browser.
       </p>
@@ -337,7 +337,7 @@ function CompletedScreen() {
         </div>
         <h1 className="text-xl font-semibold">You&apos;re all set!</h1>
         <p className="text-sm text-muted-foreground mt-2">
-          Bulwark Webmail is configured and ready to use.
+          NuwaMail is configured and ready to use.
         </p>
       </div>
       <div className="mt-6 space-y-2">
@@ -419,7 +419,7 @@ function AlreadyConfiguredScreen() {
         </div>
         <h1 className="text-xl font-semibold">Setup is already complete</h1>
         <p className="text-sm text-muted-foreground mt-2">
-          Bulwark Webmail is configured. Sign in to continue.
+          NuwaMail is configured. Sign in to continue.
         </p>
       </div>
       <div className="mt-6 space-y-2">
@@ -1078,7 +1078,7 @@ function SecurityStep({ config, setConfig, onNext, onBack }: Pick<StepProps, 'co
         <Toggle
           checked={config.telemetryEnabled}
           onChange={(v) => setConfig({ ...config, telemetryEnabled: v })}
-          label="Send anonymous usage stats to help improve Bulwark"
+          label="Send anonymous usage stats to help improve NuwaMail"
           hint="Off by default. One anonymous heartbeat per day with version, platform, and which features are enabled - never email addresses, hostnames, or IPs. You can change this anytime in admin settings."
         />
       </div>
@@ -1158,7 +1158,7 @@ function BrandingStep({ config, setConfig, onNext, onBack }: Pick<StepProps, 'co
     try {
       // Only send fields with a value. Empty strings would create an admin
       // override that shadows the system default and suppress the bundled
-      // Bulwark logo on the login page.
+      // NuwaMail logo on the login page.
       const allFields = {
         faviconUrl: config.faviconUrl,
         appLogoLightUrl: config.appLogoLightUrl,

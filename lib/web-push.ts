@@ -11,8 +11,8 @@ import type { IJMAPClient } from '@/lib/jmap/client-interface';
 // the deviceClientId per account is what makes per-account notifications work
 // at all - the relay keys subscriptions on subscriptionId (= deviceClientId),
 // so a globally-shared key meant re-registering account B overwrote A.
-const DEVICE_CLIENT_ID_PREFIX = 'bulwark.push.deviceClientId.v1.';
-const SUBSCRIPTION_ID_PREFIX = 'bulwark.push.subscriptionId.v1.';
+const DEVICE_CLIENT_ID_PREFIX = 'nuwamail.push.deviceClientId.v1.';
+const SUBSCRIPTION_ID_PREFIX = 'nuwamail.push.subscriptionId.v1.';
 
 function deviceClientIdKey(accountId: string): string {
   return DEVICE_CLIENT_ID_PREFIX + accountId;
@@ -30,7 +30,7 @@ const SW_URL = `${BASE_PATH}/sw.js`;
 // Override at build time via NEXT_PUBLIC_PUSH_RELAY_URL or at runtime by
 // calling enableWebPush({ relayBaseUrl }) from the settings UI.
 export const DEFAULT_RELAY_BASE_URL =
-  process.env.NEXT_PUBLIC_PUSH_RELAY_URL || 'https://notifications.relay.bulwarkmail.org';
+  process.env.NEXT_PUBLIC_PUSH_RELAY_URL || 'https://notifications.relay.nuwamail.com';
 
 // Match the mobile app's lifetime hint. The JMAP server may clamp this down.
 const SUBSCRIPTION_EXPIRES_DAYS = 90;
@@ -353,7 +353,7 @@ export async function enableWebPush(
   //   - a different deviceClientId: could be another live device or the mobile
   //     app on this account. Ask the relay whether it's still alive and only
   //     reap the ones it confirms are dead. Anything live - or anything the
-  //     relay can't vouch for (a different relay, a non-Bulwark client, a
+  //     relay can't vouch for (a different relay, a non-NuwaMail client, a
   //     network blip) - is left untouched.
   for (const s of existingSubs) {
     if (s.id === storedServerId) continue;

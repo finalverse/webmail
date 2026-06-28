@@ -12,23 +12,23 @@ export interface ImpersonationConfig {
  * that as a 404 so an unconfigured deployment doesn't expose the endpoint.
  *
  * Required env:
- *   BULWARK_JWT_AUTH_SECRET        (>= 32 chars)
- *   BULWARK_STALWART_MASTER_USER   master account address (e.g. master@example.com)
- *   BULWARK_STALWART_MASTER_PASSWORD
+ *   NUWAMAIL_JWT_AUTH_SECRET        (>= 32 chars)
+ *   NUWAMAIL_STALWART_MASTER_USER   master account address (e.g. master@example.com)
+ *   NUWAMAIL_STALWART_MASTER_PASSWORD
  *
  * Optional env:
- *   BULWARK_JWT_AUTH_ISSUER        (default: "platform-api/webmail")
+ *   NUWAMAIL_JWT_AUTH_ISSUER        (default: "platform-api/webmail")
  */
 export function readImpersonationConfig(): ImpersonationConfig | null {
-  const jwtSecret = process.env.BULWARK_JWT_AUTH_SECRET ?? '';
-  const masterUser = process.env.BULWARK_STALWART_MASTER_USER ?? '';
-  const masterPassword = process.env.BULWARK_STALWART_MASTER_PASSWORD ?? '';
+  const jwtSecret = process.env.NUWAMAIL_JWT_AUTH_SECRET ?? '';
+  const masterUser = process.env.NUWAMAIL_STALWART_MASTER_USER ?? '';
+  const masterPassword = process.env.NUWAMAIL_STALWART_MASTER_PASSWORD ?? '';
   if (!jwtSecret || !masterUser || !masterPassword) return null;
   return {
     jwtSecret,
     masterUser,
     masterPassword,
-    expectedIssuer: process.env.BULWARK_JWT_AUTH_ISSUER ?? 'platform-api/webmail',
+    expectedIssuer: process.env.NUWAMAIL_JWT_AUTH_ISSUER ?? 'platform-api/webmail',
   };
 }
 

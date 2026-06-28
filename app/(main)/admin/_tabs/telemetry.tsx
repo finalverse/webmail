@@ -118,12 +118,12 @@ export function TelemetryTab() {
       <header className="space-y-2">
         <h1 className="text-2xl font-semibold">Anonymous Usage Stats</h1>
         <p className="text-sm text-muted-foreground">
-          Bulwark can send one anonymous heartbeat per day so we can see how many instances are
+          NuwaMail can send one anonymous heartbeat per day so we can see how many instances are
           running, on what platforms, and which features they use. It&apos;s <strong>off by
           default</strong>; one click below enables it and helps us make the product better. No
           email addresses, no hostnames, no IPs are sent.{' '}
           <a
-            href="https://bulwarkmail.org/docs/legal/privacy/telemetry"
+            href="https://nuwamail.com/docs/legal/privacy/telemetry"
             target="_blank"
             rel="noreferrer"
             className="underline inline-flex items-center gap-1"
@@ -142,7 +142,7 @@ export function TelemetryTab() {
               {status.consent === 'on' && 'Heartbeats are enabled. Thanks for helping us improve!'}
               {status.consent === 'off' && 'Heartbeats are off (default).'}
               {envOverridden && (
-                <> Locked by <code>BULWARK_TELEMETRY</code> env var.</>
+                <> Locked by <code>NUWAMAIL_TELEMETRY</code> env var.</>
               )}
             </div>
           </div>
@@ -194,7 +194,7 @@ export function TelemetryTab() {
         <div className="font-medium">Endpoint</div>
         <p className="text-sm text-muted-foreground">
           Where heartbeats are sent. Defaults to the project&apos;s collector. Point at your own collector
-          (open source at <code>bulwarkmail/dashboard</code>) or clear this field to disable sending.
+          (open source at <code>nuwamail/dashboard</code>) or clear this field to disable sending.
         </p>
         <div className="flex flex-col sm:flex-row gap-2">
           <input

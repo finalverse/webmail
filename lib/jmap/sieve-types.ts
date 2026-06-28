@@ -55,7 +55,7 @@ export interface FilterAction {
   value?: string;
 }
 
-export type FilterOrigin = 'bulwark' | 'external' | 'opaque';
+export type FilterOrigin = 'nuwamail' | 'external' | 'opaque';
 
 export interface FilterRule {
   id: string;

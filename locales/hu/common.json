@@ -141,18 +141,18 @@
   },
   "protocol_handlers": {
     "title": "Alapértelmezett alkalmazások",
-    "description": "Válaszd ki, hogy az e-mail és naptár hivatkozások a Bulwarkban nyíljanak meg. Technikailag a Bulwark protokollkezelőként regisztrálja magát a mailto: és webcal: hivatkozásokhoz.",
+    "description": "Válaszd ki, hogy az e-mail és naptár hivatkozások a NuwaMailban nyíljanak meg. Technikailag a NuwaMail protokollkezelőként regisztrálja magát a mailto: és webcal: hivatkozásokhoz.",
     "unsupported": "Ez a böngésző vagy kapcsolat nem támogatja a kézi protokollkezelő regisztrációt. Lehetőség lehet a telepített PWA használatára a böngésző vagy operációs rendszer beállításain keresztül.",
     "mailto_label": "E-mail hivatkozások",
-    "mailto_description": "Mailto: hivatkozások megnyitása a Bulwarkban egy előre kitöltött szerkesztővel.",
+    "mailto_description": "Mailto: hivatkozások megnyitása a NuwaMailban egy előre kitöltött szerkesztővel.",
     "protocol_open_mode_label": "Protokoll hivatkozások megnyitásakor",
-    "protocol_open_mode_description": "Válaszd ki, hogy a Bulwark a mailto: és webcal: hivatkozásokat új lapon vagy a meglévő munkamenetben nyissa meg. Az aktív munkamenet opcióhoz értesítési engedély szükséges, hogy egy értesítésre kattintva előtérbe hozd a Bulwarkot, ha a böngésző blokkolja a fókuszt.",
+    "protocol_open_mode_description": "Válaszd ki, hogy a NuwaMail a mailto: és webcal: hivatkozásokat új lapon vagy a meglévő munkamenetben nyissa meg. Az aktív munkamenet opcióhoz értesítési engedély szükséges, hogy egy értesítésre kattintva előtérbe hozd a NuwaMailot, ha a böngésző blokkolja a fókuszt.",
     "protocol_open_mode_active_session": "Megnyitás aktív munkamenetben, ha lehetséges",
     "protocol_open_mode_new_tab": "Mindig új lapon nyisson",
-    "focus_notification_title": "Bulwark megnyitása",
-    "focus_notification_body": "A hivatkozás megnyílt a Bulwarkban. Kattints az ablak előtérbe hozásához.",
+    "focus_notification_title": "NuwaMail megnyitása",
+    "focus_notification_body": "A hivatkozás megnyílt a NuwaMailban. Kattints az ablak előtérbe hozásához.",
     "webcal_label": "Naptár hivatkozások",
-    "webcal_description": "Webcal: hivatkozások megnyitása a Bulwarkban egy előre kitöltött naptárfeliratkozási párbeszédpanellel.",
+    "webcal_description": "Webcal: hivatkozások megnyitása a NuwaMailban egy előre kitöltött naptárfeliratkozási párbeszédpanellel.",
     "register_mailto": "E-mail alkalmazás regisztrálása",
     "register_webcal": "Naptár alkalmazás regisztrálása",
     "mailto_registered": "E-mail kezelő regisztráció kérve",
@@ -160,7 +160,7 @@
     "registration_failed": "Protokollkezelő regisztráció sikertelen",
     "opening_mailto": "Szerkesztő megnyitása...",
     "opening_webcal": "Naptár megnyitása...",
-    "browser_note": "A böngésző vagy operációs rendszered megerősítést kérhet, és előfordulhat, hogy a Bulwarkot telepíteni kell, mielőtt alapértelmezett alkalmazásként kiválasztható.",
+    "browser_note": "A böngésző vagy operációs rendszered megerősítést kérhet, és előfordulhat, hogy a NuwaMailot telepíteni kell, mielőtt alapértelmezett alkalmazásként kiválasztható.",
     "select_account_title": "Fiók kiválasztása",
     "select_mailto_account": "Válaszd ki, melyik fiók nyissa meg ezt az e-mail hivatkozást.",
     "select_webcal_account": "Válaszd ki, melyik fiók nyissa meg ezt a naptár hivatkozást.",
@@ -701,9 +701,9 @@
     "app_title": "Webmail",
     "reconnecting": "Kapcsolat megszakadt. Újracsatlakozás...",
     "rate_limited_title": "A szerver hitelesítés átmenetileg korlátozva van.",
-    "rate_limited_detail": "A Bulwark szüneteltette a háttérkéréseket a lezárás elkerülése érdekében. Újrapróbálkozás {seconds} másodperc múlva.",
+    "rate_limited_detail": "A NuwaMail szüneteltette a háttérkéréseket a lezárás elkerülése érdekében. Újrapróbálkozás {seconds} másodperc múlva.",
     "rate_limited_action_title": "Kérés szüneteltetve a lezárás elkerülése érdekében.",
-    "rate_limited_action_detail": "A Bulwark várja a szerver lehűlését, mielőtt további hitelesített kéréseket küldene. Próbáld újra {seconds} másodperc múlva."
+    "rate_limited_action_detail": "A NuwaMail várja a szerver lehűlését, mielőtt további hitelesített kéréseket küldene. Próbáld újra {seconds} másodperc múlva."
   },
   "notifications": {
     "email_sent": "E-mail sikeresen elküldve",
@@ -985,9 +985,9 @@
       },
       "push": {
         "title": "Háttérértesítések",
-        "description": "Rendszerértesítések fogadása új levelekről, amikor ez az oldal be van zárva. A Bulwark push relén keresztül kézbesítve; a relay soha nem látja a levél tartalmát.",
+        "description": "Rendszerértesítések fogadása új levelekről, amikor ez az oldal be van zárva. A NuwaMail push relén keresztül kézbesítve; a relay soha nem látja a levél tartalmát.",
         "relay_label": "Push relé",
-        "relay_desc": "Alapértelmezés szerint a tárolt Bulwark relay. Csak akkor módosítsd, ha sajátot üzemeltetsz.",
+        "relay_desc": "Alapértelmezés szerint a tárolt NuwaMail relay. Csak akkor módosítsd, ha sajátot üzemeltetsz.",
         "relay_locked": "Rendszergazda által beállítva",
         "relay_locked_desc": "A push relay URL-t a rendszergazda állította be, és nem módosítható.",
         "relay_placeholder": "https://notifications.relay.example.com",
@@ -1445,10 +1445,10 @@
       },
       "link_device": {
         "title": "Mobilalkalmazás összekapcsolása",
-        "description": "Jelentkezz be a Bulwark Mail mobilalkalmazásba gépelés nélkül. Generálj itt egy QR-kódot, és olvasd be az alkalmazás bejelentkezési képernyőjén.",
+        "description": "Jelentkezz be a NuwaMail mobilalkalmazásba gépelés nélkül. Generálj itt egy QR-kódot, és olvasd be az alkalmazás bejelentkezési képernyőjén.",
         "generate": "QR-kód megjelenítése",
         "regenerate": "Új kód megjelenítése",
-        "instructions": "Nyisd meg a Bulwark Mail alkalmazást, koppints a \"QR-kód beolvasása\" lehetőségre a bejelentkezési képernyőn, és irányítsd ide a kamerát.",
+        "instructions": "Nyisd meg a NuwaMail alkalmazást, koppints a \"QR-kód beolvasása\" lehetőségre a bejelentkezési képernyőn, és irányítsd ide a kamerát.",
         "expires_in": "Ez a kód {seconds} másodperc múlva lejár. Csak egyszer használható.",
         "expired": "Ez a kód lejárt.",
         "generating": "Generálás…",
@@ -1613,7 +1613,7 @@
         "button": "Importálás"
       },
       "about": {
-        "title": "Bulwark Webmail"
+        "title": "NuwaMail"
       }
     },
     "sidebar_apps": {
@@ -2943,7 +2943,7 @@
     "start_tour": "Bemutató indítása"
   },
   "demo_welcome": {
-    "title": "Üdvözlünk a Bulwark Mail-ben",
+    "title": "Üdvözlünk a NuwaMail-ben",
     "description": "Fedezz fel egy teljes funkciókkal rendelkező webmail klienst - közvetlenül a böngésződben. Az összes adat az eszközödön marad, nyugodtan tesztelj mindent.",
     "feature_email": "E-mailek olvasása és írása",
     "feature_organize": "Címkék, csillagok és mappák",
@@ -3061,7 +3061,7 @@
     "settings_folder_layout_inline": "Beágyazva",
     "settings_folder_layout_sidebar": "Oldalsáv",
     "disabled_title": "A fájlok funkciót a rendszergazda letiltotta",
-    "disabled_description": "Nagyméretű fájlok WebDAV-on keresztüli feltöltése Stalwart/RocksDB instabilitást okozhat, beleértve a memóriahiányos összeomlásokat és a helyreállíthatatlan lemezhasználatot. A törölt fájlok nem feltétlenül kerülnek azonnal eltávolításra a blob tárolóból. Ez a funkció nem ajánlott éles környezetben.",
+    "disabled_description": "Nagyméretű fájlok WebDAV-on keresztüli feltöltése NuwaMail/RocksDB instabilitást okozhat, beleértve a memóriahiányos összeomlásokat és a helyreállíthatatlan lemezhasználatot. A törölt fájlok nem feltétlenül kerülnek azonnal eltávolításra a blob tárolóból. Ez a funkció nem ajánlott éles környezetben.",
     "stability_warning": "Nagyméretű fájlok feltöltése szerver instabilitást okozhat. A törölt fájlok nem feltétlenül kerülnek azonnal eltávolításra a tárolóból. Használat óvatosan.",
     "migration_title": "Fájlok frissítése…",
     "migration_description": "A mappák és fájlok a megfelelő struktúrába rendeződnek. Ez csak egyszer történik meg."

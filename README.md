@@ -1,20 +1,20 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="public/branding/Bulwark_Logo_with_Lettering_White_and_Color.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="public/branding/Bulwark_Logo_with_Lettering_Dark_Color.svg" />
-  <img src="public/branding/Bulwark_Logo_with_Lettering_Dark_Color.svg" alt="Bulwark Webmail" width="280" />
+  <source media="(prefers-color-scheme: dark)" srcset="public/branding/Nuwamail_Logo_with_Lettering_White_and_Color.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="public/branding/Nuwamail_Logo_with_Lettering_Dark_and_Color.svg" />
+  <img src="public/branding/Nuwamail_Logo_with_Lettering_Dark_and_Color.svg" alt="NuwaMail" width="280" />
 </picture>
 
-# Bulwark Webmail
+# NuwaMail
 
 A modern, self-hosted webmail client for [Stalwart Mail Server](https://stalw.art/), built with Next.js and the JMAP protocol.
 
 [![License: AGPL v3](https://img.shields.io/badge/license-AGPL%20v3-blue.svg?logo=gnu&logoColor=white)](LICENSE)
 [![Discord](https://img.shields.io/discord/1482128142939455674?color=7289da&label=discord&logo=discord&logoColor=white)](https://discord.gg/tYCujymGrT)
 [![Version](https://img.shields.io/badge/version-1.7.5-green.svg?logo=git&logoColor=white)](CHANGELOG.md)
-[![Docker](https://img.shields.io/badge/docker-ghcr.io%2Fbulwarkmail%2Fwebmail-blue?logo=docker&logoColor=white)](https://ghcr.io/bulwarkmail/webmail)
-[![Grafana](https://img.shields.io/badge/grafana-dashboard-orange?logo=grafana&logoColor=white)](https://grafana.external.bulwarkmail.org/)
+[![Docker](https://img.shields.io/badge/docker-ghcr.io%2Fnuwamail%2Fwebmail-blue?logo=docker&logoColor=white)](https://ghcr.io/nuwamail/webmail)
+[![Grafana](https://img.shields.io/badge/grafana-dashboard-orange?logo=grafana&logoColor=white)](https://grafana.external.nuwamail.com/)
 
 </div>
 
@@ -79,7 +79,7 @@ The wizard writes to `ADMIN_CONFIG_DIR` (`./data/admin` by default). Setting `JM
 
 ## Overview
 
-Bulwark is a full webmail suite, not just an inbox. It bundles the four apps most self-hosters end up wanting on the same login:
+NuwaMail is a full webmail suite, not just an inbox. It bundles the four apps most self-hosters end up wanting on the same login:
 
 - **Mail** – threading, unified inbox, cross-account "All accounts" views, full-text search, Sieve filters, S/MIME, templates
 - **Calendar** – month/week/day/agenda, recurring events, iMIP invitations, CalDAV subscriptions
@@ -97,7 +97,7 @@ Full feature list: **[FEATURES.md](FEATURES.md)**.
 ### Docker
 
 ```bash
-docker run -d -p 3000:3000 ghcr.io/bulwarkmail/webmail:latest
+docker run -d -p 3000:3000 ghcr.io/nuwamail/webmail:latest
 ```
 
 Or with Docker Compose:
@@ -111,7 +111,7 @@ On first launch, open `http://localhost:3000` – the **web setup wizard** walks
 ### From Source
 
 ```bash
-git clone https://github.com/bulwarkmail/webmail.git
+git clone https://github.com/finalverse/webmail.git
 cd webmail
 npm install
 npm run build && npm start
@@ -225,7 +225,7 @@ DOMAIN_BRANDING=[{"host":"maildomain1.com","loginCompanyName":"Company One","log
 <summary>Extension directory</summary>
 
 ```env
-EXTENSION_DIRECTORY_URL=https://extensions.bulwarkmail.org
+EXTENSION_DIRECTORY_URL=https://extensions.nuwamail.com
 ```
 
 Enables the admin marketplace for browsing and installing plugins and themes.
@@ -270,7 +270,7 @@ NEXT_PUBLIC_LOCALE_PREFIX=always     # avoids next-intl rewrite loops
 Unlike most other variables, `NEXT_PUBLIC_BASE_PATH` is read at **build time** because Next.js bakes it into emitted asset URLs. To use it with the published Docker image, build your own image with the variable set:
 
 ```bash
-docker build --build-arg NEXT_PUBLIC_BASE_PATH=/webmail -t bulwark-webmail .
+docker build --build-arg NEXT_PUBLIC_BASE_PATH=/webmail -t nuwamail-webmail .
 ```
 
 Then point your reverse proxy at the container without stripping the prefix - the app expects to receive requests under `/webmail/...` and serves all routes (`/webmail/api/...`, `/webmail/_next/static/...`, `/webmail/sw.js`, etc.) accordingly.

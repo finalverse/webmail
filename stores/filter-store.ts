@@ -168,12 +168,12 @@ export const useFilterStore = create<FilterStore>()((set, get) => ({
   },
 
   addRule: (rule) => {
-    // Insert new bulwark rules before external/opaque rules so Bulwark's
+    // Insert new nuwamail rules before external/opaque rules so NuwaMail's
     // managed section stays contiguous.
     set((state) => {
-      const bulwark = state.rules.filter(r => !r.origin || r.origin === 'bulwark');
+      const nuwamail = state.rules.filter(r => !r.origin || r.origin === 'nuwamail');
       const external = state.rules.filter(r => r.origin === 'external' || r.origin === 'opaque');
-      return { rules: [...bulwark, rule, ...external] };
+      return { rules: [...nuwamail, rule, ...external] };
     });
   },
 
@@ -197,14 +197,14 @@ export const useFilterStore = create<FilterStore>()((set, get) => ({
   },
 
   reorderRules: (ruleIds) => {
-    // Only reorder bulwark rules; external rules always stay at the end in
+    // Only reorder nuwamail rules; external rules always stay at the end in
     // their original order.
     set((state) => {
-      const bulwarkMap = new Map(
-        state.rules.filter(r => !r.origin || r.origin === 'bulwark').map(r => [r.id, r]),
+      const nuwamailMap = new Map(
+        state.rules.filter(r => !r.origin || r.origin === 'nuwamail').map(r => [r.id, r]),
       );
       const external = state.rules.filter(r => r.origin === 'external' || r.origin === 'opaque');
-      const reordered = ruleIds.map(id => bulwarkMap.get(id)).filter(Boolean) as FilterRule[];
+      const reordered = ruleIds.map(id => nuwamailMap.get(id)).filter(Boolean) as FilterRule[];
       return { rules: [...reordered, ...external] };
     });
   },

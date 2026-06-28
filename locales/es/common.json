@@ -141,18 +141,18 @@
   },
   "protocol_handlers": {
     "title": "Aplicaciones predeterminadas",
-    "description": "Elige si los enlaces de correo y calendario se abren en Bulwark. Técnicamente, Bulwark se registra como controlador de protocolo para enlaces mailto: y webcal:.",
+    "description": "Elige si los enlaces de correo y calendario se abren en NuwaMail. Técnicamente, NuwaMail se registra como controlador de protocolo para enlaces mailto: y webcal:.",
     "unsupported": "Este navegador o esta conexión no admite el registro manual de controladores de protocolo. Es posible que aún puedas usar la PWA instalada desde la configuración del navegador o del sistema.",
     "mailto_label": "Enlaces de correo",
-    "mailto_description": "Abre enlaces mailto: en Bulwark con el redactor rellenado previamente.",
+    "mailto_description": "Abre enlaces mailto: en NuwaMail con el redactor rellenado previamente.",
     "protocol_open_mode_label": "Al abrir enlaces de protocolo",
-    "protocol_open_mode_description": "Elige si Bulwark abre los enlaces mailto: y webcal: en una nueva pestaña o reutiliza una sesión abierta. La opción de sesión activa necesita permiso de notificaciones para que puedas hacer clic en una notificación de respaldo y traer Bulwark al frente si el navegador bloquea el foco.",
+    "protocol_open_mode_description": "Elige si NuwaMail abre los enlaces mailto: y webcal: en una nueva pestaña o reutiliza una sesión abierta. La opción de sesión activa necesita permiso de notificaciones para que puedas hacer clic en una notificación de respaldo y traer NuwaMail al frente si el navegador bloquea el foco.",
     "protocol_open_mode_active_session": "Abrir en la sesión activa si es posible",
     "protocol_open_mode_new_tab": "Abrir siempre una nueva pestaña",
-    "focus_notification_title": "Abrir Bulwark",
-    "focus_notification_body": "El enlace se abrió en Bulwark. Haz clic para traer la ventana al frente.",
+    "focus_notification_title": "Abrir NuwaMail",
+    "focus_notification_body": "El enlace se abrió en NuwaMail. Haz clic para traer la ventana al frente.",
     "webcal_label": "Enlaces de calendario",
-    "webcal_description": "Abre enlaces webcal: en Bulwark con un diálogo de suscripción al calendario rellenado previamente.",
+    "webcal_description": "Abre enlaces webcal: en NuwaMail con un diálogo de suscripción al calendario rellenado previamente.",
     "register_mailto": "Registrar aplicación de correo",
     "register_webcal": "Registrar aplicación de calendario",
     "mailto_registered": "Registro del controlador de correo solicitado",
@@ -160,7 +160,7 @@
     "registration_failed": "No se pudo registrar el controlador de protocolo",
     "opening_mailto": "Abriendo redactor...",
     "opening_webcal": "Abriendo calendario...",
-    "browser_note": "Tu navegador o sistema operativo puede pedirte confirmación y puede requerir que Bulwark esté instalado antes de poder seleccionarlo como aplicación predeterminada.",
+    "browser_note": "Tu navegador o sistema operativo puede pedirte confirmación y puede requerir que NuwaMail esté instalado antes de poder seleccionarlo como aplicación predeterminada.",
     "select_account_title": "Elegir cuenta",
     "select_mailto_account": "Elige qué cuenta debe abrir este enlace de correo.",
     "select_webcal_account": "Elige qué cuenta debe abrir este enlace de calendario.",
@@ -701,9 +701,9 @@
     "app_title": "Correo Web",
     "reconnecting": "Conexión perdida. Intentando reconectar…",
     "rate_limited_title": "La autenticación del servidor está limitada temporalmente.",
-    "rate_limited_detail": "Bulwark ha pausado las solicitudes en segundo plano para evitar un bloqueo. Reintentando en {seconds}s.",
+    "rate_limited_detail": "NuwaMail ha pausado las solicitudes en segundo plano para evitar un bloqueo. Reintentando en {seconds}s.",
     "rate_limited_action_title": "Solicitud pausada para evitar el bloqueo.",
-    "rate_limited_action_detail": "Bulwark está esperando a que termine el enfriamiento del servidor antes de enviar más solicitudes autenticadas. Inténtalo de nuevo en {seconds}s."
+    "rate_limited_action_detail": "NuwaMail está esperando a que termine el enfriamiento del servidor antes de enviar más solicitudes autenticadas. Inténtalo de nuevo en {seconds}s."
   },
   "notifications": {
     "email_sent": "Correo enviado exitosamente",
@@ -1007,12 +1007,12 @@
       "push": {
         "confirm_disable_message": "Este dispositivo dejará de recibir alertas cuando el sitio esté cerrado.",
         "confirm_disable_title": "¿Desactivar las notificaciones en segundo plano?",
-        "description": "Recibe notificaciones del sistema para correo nuevo cuando este sitio está cerrado. Se entrega a través del relay push de Bulwark; el relay nunca ve el contenido del correo.",
+        "description": "Recibe notificaciones del sistema para correo nuevo cuando este sitio está cerrado. Se entrega a través del relay push de NuwaMail; el relay nunca ve el contenido del correo.",
         "disable": "Desactivar",
         "enable": "Activar",
         "ios_hint": "En iOS, instala primero el sitio en la pantalla de inicio: Safari solo entrega Web Push a PWAs instaladas.",
         "reenable": "Volver a registrar",
-        "relay_desc": "Usa el relay alojado de Bulwark de forma predeterminada. Cámbialo solo si te alojas tú mismo.",
+        "relay_desc": "Usa el relay alojado de NuwaMail de forma predeterminada. Cámbialo solo si te alojas tú mismo.",
         "relay_label": "Relay push",
         "relay_locked": "Establecido por el administrador",
         "relay_locked_desc": "La URL del relay push ha sido establecida por tu administrador y no se puede cambiar.",
@@ -1442,10 +1442,10 @@
       },
       "link_device": {
         "title": "Vincular aplicación móvil",
-        "description": "Inicie sesión en la aplicación móvil de Bulwark Mail sin escribir nada. Genere un código QR aquí y escanéelo desde la pantalla de inicio de sesión de la aplicación.",
+        "description": "Inicie sesión en la aplicación móvil de NuwaMail sin escribir nada. Genere un código QR aquí y escanéelo desde la pantalla de inicio de sesión de la aplicación.",
         "generate": "Mostrar código QR",
         "regenerate": "Mostrar un código nuevo",
-        "instructions": "Abra la aplicación Bulwark Mail, toque \"Escanear código QR\" en la pantalla de inicio de sesión y apunte su cámara aquí.",
+        "instructions": "Abra la aplicación NuwaMail, toque \"Escanear código QR\" en la pantalla de inicio de sesión y apunte su cámara aquí.",
         "expires_in": "Este código caduca en {seconds} segundos. Solo se puede usar una vez.",
         "expired": "Este código ha caducado.",
         "generating": "Generando…",
@@ -1610,7 +1610,7 @@
         "button": "Importar"
       },
       "about": {
-        "title": "Bulwark Webmail"
+        "title": "NuwaMail"
       }
     },
     "sidebar_apps": {
@@ -2920,7 +2920,7 @@
     "start_tour": "Iniciar tour"
   },
   "demo_welcome": {
-    "title": "Bienvenido a Bulwark Mail",
+    "title": "Bienvenido a NuwaMail",
     "description": "Explora un cliente de correo web completo - directamente en tu navegador. Todos los datos quedan en tu dispositivo, así que prueba todo.",
     "feature_email": "Leer y redactar correos",
     "feature_organize": "Etiquetas, estrellas y carpetas",
@@ -3035,7 +3035,7 @@
     "settings_folder_layout_inline": "Integrado",
     "settings_folder_layout_sidebar": "Barra lateral",
     "disabled_title": "La función de archivos ha sido desactivada por su administrador",
-    "disabled_description": "Las cargas de archivos grandes a través de WebDAV pueden causar inestabilidad en Stalwart/RocksDB, incluyendo errores de memoria y uso irrecuperable del disco. Los archivos eliminados pueden no eliminarse inmediatamente del almacenamiento. Esta función no se recomienda para entornos de producción.",
+    "disabled_description": "Las cargas de archivos grandes a través de WebDAV pueden causar inestabilidad en NuwaMail/RocksDB, incluyendo errores de memoria y uso irrecuperable del disco. Los archivos eliminados pueden no eliminarse inmediatamente del almacenamiento. Esta función no se recomienda para entornos de producción.",
     "stability_warning": "Las cargas de archivos grandes pueden causar inestabilidad del servidor. Los archivos eliminados pueden no eliminarse inmediatamente del almacenamiento. Usar con precaución.",
     "no_accounts": "No hay cuentas conectadas.",
     "open_folder_tree": "Abrir árbol de carpetas",

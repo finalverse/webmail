@@ -1,4 +1,8 @@
-# Bulwark Webmail fork notice
+# NuwaMail Webmail fork notice
+
+NuwaMail Webmail is an independent fork of Bulwark Webmail, rebranded for the
+NuwaMail Cloud platform. It is not an official Bulwark product and is not
+endorsed by the Bulwark Webmail authors.
 
 This repository is distributed under the GNU Affero General Public License,
 version 3 only. It also includes material derived from earlier MIT-licensed
@@ -8,6 +12,7 @@ Fork lineage:
 
 - https://github.com/root-fr/jmap-webmail
 - https://github.com/bulwarkmail/webmail
+- https://github.com/finalverse/webmail (NuwaMail Webmail)
 
 Original MIT attribution notice preserved from the earlier forked codebase:
 

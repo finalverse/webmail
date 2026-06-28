@@ -141,18 +141,18 @@
   },
   "protocol_handlers": {
     "title": "기본 앱",
-    "description": "이메일 및 캘린더 링크를 Bulwark에서 열지 선택하세요. 기술적으로 Bulwark는 mailto: 및 webcal: 링크의 프로토콜 핸들러로 등록됩니다.",
+    "description": "이메일 및 캘린더 링크를 NuwaMail에서 열지 선택하세요. 기술적으로 NuwaMail는 mailto: 및 webcal: 링크의 프로토콜 핸들러로 등록됩니다.",
     "unsupported": "이 브라우저 또는 연결은 수동 프로토콜 핸들러 등록을 지원하지 않습니다. 설치된 PWA는 브라우저 또는 시스템 설정을 통해 사용할 수 있을 수 있습니다.",
     "mailto_label": "이메일 링크",
-    "mailto_description": "mailto: 링크를 Bulwark의 미리 채워진 작성 창에서 엽니다.",
+    "mailto_description": "mailto: 링크를 NuwaMail의 미리 채워진 작성 창에서 엽니다.",
     "protocol_open_mode_label": "프로토콜 링크를 열 때",
-    "protocol_open_mode_description": "Bulwark가 mailto: 및 webcal: 링크를 새 탭에서 열지, 열린 세션을 재사용할지 선택하세요. 활성 세션 옵션은 브라우저가 포커스를 차단할 때 Bulwark를 앞으로 가져오기 위한 대체 알림을 클릭할 수 있도록 알림 권한이 필요합니다.",
+    "protocol_open_mode_description": "NuwaMail가 mailto: 및 webcal: 링크를 새 탭에서 열지, 열린 세션을 재사용할지 선택하세요. 활성 세션 옵션은 브라우저가 포커스를 차단할 때 NuwaMail를 앞으로 가져오기 위한 대체 알림을 클릭할 수 있도록 알림 권한이 필요합니다.",
     "protocol_open_mode_active_session": "가능하면 활성 세션에서 열기",
     "protocol_open_mode_new_tab": "항상 새 탭 열기",
-    "focus_notification_title": "Bulwark 열기",
-    "focus_notification_body": "링크가 Bulwark에서 열렸습니다. 창을 앞으로 가져오려면 클릭하세요.",
+    "focus_notification_title": "NuwaMail 열기",
+    "focus_notification_body": "링크가 NuwaMail에서 열렸습니다. 창을 앞으로 가져오려면 클릭하세요.",
     "webcal_label": "캘린더 링크",
-    "webcal_description": "webcal: 링크를 Bulwark의 미리 채워진 캘린더 구독 대화상자에서 엽니다.",
+    "webcal_description": "webcal: 링크를 NuwaMail의 미리 채워진 캘린더 구독 대화상자에서 엽니다.",
     "register_mailto": "이메일 앱 등록",
     "register_webcal": "캘린더 앱 등록",
     "mailto_registered": "이메일 핸들러 등록을 요청했습니다",
@@ -160,7 +160,7 @@
     "registration_failed": "프로토콜 핸들러 등록에 실패했습니다",
     "opening_mailto": "작성 창을 여는 중...",
     "opening_webcal": "캘린더를 여는 중...",
-    "browser_note": "브라우저 또는 운영 체제에서 확인을 요청할 수 있으며, 기본 앱으로 선택하기 전에 Bulwark 설치가 필요할 수 있습니다.",
+    "browser_note": "브라우저 또는 운영 체제에서 확인을 요청할 수 있으며, 기본 앱으로 선택하기 전에 NuwaMail 설치가 필요할 수 있습니다.",
     "select_account_title": "계정 선택",
     "select_mailto_account": "이 이메일 링크를 열 계정을 선택하세요.",
     "select_webcal_account": "이 캘린더 링크를 열 계정을 선택하세요.",
@@ -701,7 +701,7 @@
     "app_title": "웹메일",
     "reconnecting": "연결이 끊어졌어요. 다시 연결을 시도할게요...",
     "rate_limited_title": "서버 인증이 일시적으로 제한되었어요.",
-    "rate_limited_detail": "Bulwark가 계정 잠금을 방지하기 위해 백그라운드 요청을 일시 중지했어요. {seconds}초 후에 다시 시도할게요.",
+    "rate_limited_detail": "NuwaMail가 계정 잠금을 방지하기 위해 백그라운드 요청을 일시 중지했어요. {seconds}초 후에 다시 시도할게요.",
     "rate_limited_action_title": "계정 잠금 방지를 위해 요청이 일시 중지되었어요.",
     "rate_limited_action_detail": "추가 인증 요청을 보내기 전에 서버의 쿨다운이 끝날 때까지 대기 중이에요. {seconds}초 후에 다시 시도해 주세요."
   },
@@ -1007,12 +1007,12 @@
       "push": {
         "confirm_disable_message": "이 사이트가 닫혀 있을 때 이 기기는 알림을 더 이상 받지 않습니다.",
         "confirm_disable_title": "백그라운드 알림을 비활성화하시겠습니까?",
-        "description": "이 사이트가 닫혀 있을 때 새 메일에 대한 시스템 알림을 받습니다. Bulwark 푸시 릴레이를 통해 전달되며, 릴레이는 메일 내용을 절대 보지 않습니다.",
+        "description": "이 사이트가 닫혀 있을 때 새 메일에 대한 시스템 알림을 받습니다. NuwaMail 푸시 릴레이를 통해 전달되며, 릴레이는 메일 내용을 절대 보지 않습니다.",
         "disable": "비활성화",
         "enable": "활성화",
         "ios_hint": "iOS에서는 먼저 사이트를 홈 화면에 설치하세요. Safari는 설치된 PWA에만 Web Push를 전달합니다.",
         "reenable": "다시 등록",
-        "relay_desc": "기본값은 호스팅된 Bulwark 릴레이입니다. 셀프 호스팅 시에만 변경하세요.",
+        "relay_desc": "기본값은 호스팅된 NuwaMail 릴레이입니다. 셀프 호스팅 시에만 변경하세요.",
         "relay_label": "푸시 릴레이",
         "relay_locked": "관리자에 의해 설정됨",
         "relay_locked_desc": "푸시 릴레이 URL은 관리자가 설정했으며 변경할 수 없어요.",
@@ -1442,10 +1442,10 @@
       },
       "link_device": {
         "title": "모바일 앱 연결",
-        "description": "아무것도 입력하지 않고 Bulwark Mail 모바일 앱에 로그인하세요. 여기에서 QR 코드를 생성하고 앱의 로그인 화면에서 스캔하세요.",
+        "description": "아무것도 입력하지 않고 NuwaMail 모바일 앱에 로그인하세요. 여기에서 QR 코드를 생성하고 앱의 로그인 화면에서 스캔하세요.",
         "generate": "QR 코드 표시",
         "regenerate": "새 코드 표시",
-        "instructions": "Bulwark Mail 앱을 열고 로그인 화면에서 \"QR 코드 스캔\"을 누른 다음 카메라를 여기에 비추세요.",
+        "instructions": "NuwaMail 앱을 열고 로그인 화면에서 \"QR 코드 스캔\"을 누른 다음 카메라를 여기에 비추세요.",
         "expires_in": "이 코드는 {seconds}초 후에 만료됩니다. 한 번만 사용할 수 있습니다.",
         "expired": "이 코드는 만료되었습니다.",
         "generating": "생성 중…",
@@ -1610,7 +1610,7 @@
         "button": "가져오기"
       },
       "about": {
-        "title": "Bulwark Webmail 정보"
+        "title": "NuwaMail 정보"
       }
     },
     "sidebar_apps": {
@@ -2920,7 +2920,7 @@
     "start_tour": "둘러보기 시작"
   },
   "demo_welcome": {
-    "title": "Bulwark Mail에 오신 것을 환영해요",
+    "title": "NuwaMail에 오신 것을 환영해요",
     "description": "브라우저에서 바로 완전한 기능을 갖춘 웹메일 클라이언트를 경험해 보세요. 모든 데이터는 내 기기에만 저장되니 안심하고 테스트해 보셔도 좋아요.",
     "feature_email": "메일 읽기 및 쓰기",
     "feature_organize": "태그, 별표, 폴더 관리",
@@ -3035,7 +3035,7 @@
     "settings_folder_layout_inline": "인라인",
     "settings_folder_layout_sidebar": "사이드바",
     "disabled_title": "관리자가 파일 기능을 비활성화했어요",
-    "disabled_description": "WebDAV를 통한 대용량 파일 업로드는 Stalwart/RocksDB의 불안정을 일으킬 수 있어요. 메모리 부족 크래시나 복구 불가능한 디스크 사용 문제가 발생할 수 있으며, 삭제된 파일이 즉시 삭제되지 않을 수 있습니다. 운영 환경에서는 이 기능을 권장하지 않아요.",
+    "disabled_description": "WebDAV를 통한 대용량 파일 업로드는 NuwaMail/RocksDB의 불안정을 일으킬 수 있어요. 메모리 부족 크래시나 복구 불가능한 디스크 사용 문제가 발생할 수 있으며, 삭제된 파일이 즉시 삭제되지 않을 수 있습니다. 운영 환경에서는 이 기능을 권장하지 않아요.",
     "stability_warning": "대용량 파일 업로드는 서버 불안정을 초래할 수 있습니다. 삭제된 파일이 즉각적으로 저장소에서 지워지지 않을 수 있으니 주의해서 사용해 주세요.",
     "no_accounts": "연결된 계정이 없습니다.",
     "open_folder_tree": "폴더 트리 열기",

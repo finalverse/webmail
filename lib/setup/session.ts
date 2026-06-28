@@ -2,7 +2,7 @@ import { cookies } from 'next/headers';
 import type { NextRequest } from 'next/server';
 import { verifySetupToken } from './token';
 
-export const SETUP_COOKIE = 'bulwark_setup_token';
+export const SETUP_COOKIE = 'nuwamail_setup_token';
 const COOKIE_MAX_AGE = 60 * 60; // 1 hour, matches token TTL
 
 /**

@@ -5933,7 +5933,7 @@ export class JMAPClient implements IJMAPClient {
     }
 
     this.lastRateLimitNoticeAt = now;
-    window.dispatchEvent(new CustomEvent('bulwark:rate-limit-blocked', {
+    window.dispatchEvent(new CustomEvent('nuwamail:rate-limit-blocked', {
       detail: { retryAfterMs },
     }));
   }

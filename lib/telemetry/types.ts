@@ -1,5 +1,5 @@
 // Schema v1 of the anonymous heartbeat. Documented at
-// https://bulwarkmail.org/docs/legal/privacy/telemetry
+// https://nuwamail.com/docs/legal/privacy/telemetry
 
 export type ConsentState = 'pending' | 'on' | 'off';
 
@@ -44,4 +44,6 @@ export interface TelemetryStateFile {
   nextScheduledAt: string | null;
 }
 
-export const DEFAULT_ENDPOINT = 'https://telemetry.bulwarkmail.org/v1/heartbeat';
+// NuwaMail does not operate a telemetry endpoint. Empty = telemetry fully
+// disabled (endpointEnabled() treats "" as off); the fork never phones home.
+export const DEFAULT_ENDPOINT = '';

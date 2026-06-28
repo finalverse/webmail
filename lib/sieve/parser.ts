@@ -23,8 +23,8 @@ const METADATA_END = '@metadata:end */';
 
 const NEXTCLOUD_BLOCK_MARKER = "### Nextcloud Mail: Filters ### DON'T EDIT ###";
 
-const BULWARK_EXTERNAL_HEADER_RE =
-  /^[ \t]*#[ \t]*---[ \t]*External rules \(managed outside Bulwark\)[ \t]*---[ \t]*\r?\n/m;
+const NUWAMAIL_EXTERNAL_HEADER_RE =
+  /^[ \t]*#[ \t]*---[ \t]*External rules \(managed outside NuwaMail\)[ \t]*---[ \t]*\r?\n/m;
 
 const FIELD_FROM_HEADER: Record<string, FilterConditionField> = {
   from: 'from',
@@ -723,8 +723,8 @@ function extractNextcloudRegions(content: string): {
   return { cleaned, rules, requires };
 }
 
-function stripBulwarkExternalHeader(content: string): string {
-  return content.replace(BULWARK_EXTERNAL_HEADER_RE, '');
+function stripNuwaMailExternalHeader(content: string): string {
+  return content.replace(NUWAMAIL_EXTERNAL_HEADER_RE, '');
 }
 
 function parseExternalRules(
@@ -789,29 +789,29 @@ export function parseScript(content: string): ParseResult {
     }
 
     // Scan the portion AFTER the metadata block for external rules. A prior
-    // Bulwark save may have emitted its "External rules" header here; strip
+    // NuwaMail save may have emitted its "External rules" header here; strip
     // it so it does not get re-attached to the first external rule's rawBlock
     // and written out twice on the next save.
-    const afterMetadata = stripBulwarkExternalHeader(
+    const afterMetadata = stripNuwaMailExternalHeader(
       content.slice(endIdx + METADATA_END.length),
     );
     const nextcloud = extractNextcloudRegions(afterMetadata);
     const external = parseExternalRules(nextcloud.cleaned, 'ext');
 
-    // Parsed bulwark rules intentionally omit an explicit `origin` field so
+    // Parsed nuwamail rules intentionally omit an explicit `origin` field so
     // round-trip equality with metadata-only callers holds. Absence of origin
-    // is treated as 'bulwark' everywhere downstream.
-    const bulwarkRules: FilterRule[] = metadata.rules;
+    // is treated as 'nuwamail' everywhere downstream.
+    const nuwamailRules: FilterRule[] = metadata.rules;
 
     const externalRequires = [
       ...external.externalRequires,
       ...nextcloud.requires.filter(r => !external.externalRequires.includes(r)),
     ];
 
-    // Drop any external "rules" that are really the bulwark-managed if-blocks or vacation.
+    // Drop any external "rules" that are really the nuwamail-managed if-blocks or vacation.
     // Recognizable by the leading comment "# Rule: <name>" or "# Vacation auto-reply".
     // This applies regardless of whether the block parsed as a structured rule or
-    // fell back to opaque - a Bulwark-emitted block may fail to round-trip cleanly
+    // fell back to opaque - a NuwaMail-emitted block may fail to round-trip cleanly
     // (e.g. a value with literal braces) but the `# Rule: <name>` marker still
     // identifies it as ours.
     const filteredExternal = external.rules.filter(r => {
@@ -819,14 +819,14 @@ export function parseScript(content: string): ParseResult {
       const match = raw.match(/#\s*Rule:\s*(.+?)\s*$/m);
       if (match) {
         const name = match[1].trim();
-        if (bulwarkRules.some(b => b.name === name)) return false;
+        if (nuwamailRules.some(b => b.name === name)) return false;
       }
       if (/#\s*Vacation auto-reply/i.test(raw)) return false;
       return true;
     });
 
     return {
-      rules: [...bulwarkRules, ...nextcloud.rules, ...filteredExternal],
+      rules: [...nuwamailRules, ...nextcloud.rules, ...filteredExternal],
       isOpaque: false,
       vacation: metadata.vacation,
       externalRequires,

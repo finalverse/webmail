@@ -75,7 +75,7 @@ export function ThemesSettings() {
         {/* Default theme card */}
         <ThemeCard
           name="Default"
-          author="Bulwark"
+          author="NuwaMail"
           isDefaultTheme
           variants={['light', 'dark']}
           isDark={isDark}

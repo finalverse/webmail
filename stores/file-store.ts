@@ -74,7 +74,7 @@ interface FileState {
   clearClient: () => void;
   checkSupport: () => Promise<boolean>;
   /**
-   * One-time upgrade of files created by older Bulwark builds, which encoded
+   * One-time upgrade of files created by older NuwaMail builds, which encoded
    * the folder tree into flat node names with a Unicode separator. Reparents
    * those nodes into the real FileNode hierarchy. No-op once migrated.
    * Returns true if any node was migrated.
@@ -381,7 +381,7 @@ export const useFileStore = create<FileState>((set, get) => ({
     const renamedMarkers: { id: string; name: string }[] = [];
     for (const m of markers) {
       try {
-        await client.updateFileNode(m.id, { name: `__bulwark_migrating__.${m.id}` });
+        await client.updateFileNode(m.id, { name: `__nuwamail_migrating__.${m.id}` });
         renamedMarkers.push({ id: m.id, name: m.name });
       } catch (err) {
         console.warn('[Files] migration: could not set aside marker', JSON.stringify(m.name), '→', err instanceof Error ? err.message : String(err));

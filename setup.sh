@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # =============================================================================
-# Bulwark Webmail - Interactive Setup Script
+# NuwaMail - Interactive Setup Script
 # =============================================================================
 set -euo pipefail
 
@@ -51,7 +51,7 @@ set -u
 ENV_FILE="${SCRIPT_DIR}/.env.local"
 
 # Config values (defaults)
-CFG_APP_NAME="Bulwark Webmail"
+CFG_APP_NAME="NuwaMail"
 CFG_JMAP_SERVER_URL=""
 CFG_ALLOW_CUSTOM_JMAP_ENDPOINT="false"
 CFG_STALWART_FEATURES="true"
@@ -410,9 +410,9 @@ draw_header() {
     echo ""
 
     if [[ "$DRY_RUN" == true ]]; then
-        box "BULWARK WEBMAIL SETUP  --  DRY RUN" "$MAGENTA"
+        box "NUWAMAIL WEBMAIL SETUP  --  DRY RUN" "$MAGENTA"
     else
-        box "BULWARK WEBMAIL SETUP" "$CYAN"
+        box "NUWAMAIL WEBMAIL SETUP" "$CYAN"
     fi
 
     echo ""
@@ -458,7 +458,7 @@ screen_welcome() {
     local version
     version=$(cat "${SCRIPT_DIR}/VERSION" 2>/dev/null || echo "dev")
 
-    print_center "${BOLD}Welcome to Bulwark Webmail${RESET}"
+    print_center "${BOLD}Welcome to NuwaMail${RESET}"
     print_center "${DIM}v${version}${RESET}"
     echo ""
     echo ""
@@ -556,7 +556,7 @@ screen_server_config() {
     draw_header
 
     section_header 1 "Server Configuration" \
-        "Point Bulwark Webmail at your mail server."
+        "Point NuwaMail at your mail server."
 
     echo -e "  ${BOLD}General${RESET}"
     echo -e "    ${DIM}This name appears in the browser tab and on the login page.${RESET}"
@@ -739,7 +739,7 @@ screen_security_config() {
     echo ""
     echo -e "  ${BOLD}Anonymous Usage Stats${RESET}"
     echo ""
-    echo -e "  Bulwark can send one anonymous heartbeat per day. It helps us see how"
+    echo -e "  NuwaMail can send one anonymous heartbeat per day. It helps us see how"
     echo -e "  many instances run, on what platforms, and which features are enabled"
     echo -e "  so we can ${BOLD}make the product better${RESET}."
     echo ""
@@ -748,7 +748,7 @@ screen_security_config() {
     echo -e "    ${STAR} ${BOLD}Off by default${RESET} - you can change it any time in the admin UI"
     echo ""
 
-    prompt_yesno "Enable anonymous telemetry to help improve Bulwark?" "$CFG_TELEMETRY" "CFG_TELEMETRY"
+    prompt_yesno "Enable anonymous telemetry to help improve NuwaMail?" "$CFG_TELEMETRY" "CFG_TELEMETRY"
 
     if [[ "$CFG_TELEMETRY" == "true" ]]; then
         echo ""
@@ -767,7 +767,7 @@ screen_logging_config() {
     draw_header
 
     section_header 4 "Logging" \
-        "Control how Bulwark Webmail writes logs."
+        "Control how NuwaMail writes logs."
 
     echo -e "  ${BOLD}Log Format${RESET}"
     echo ""
@@ -824,7 +824,7 @@ screen_login_customization() {
 
     echo -e "  ${BOLD}Icons${RESET}"
     echo -e "    ${DIM}Custom favicon for the browser tab (SVG recommended, 32×32 to 512×512px)${RESET}"
-    echo -e "    ${DIM}Leave blank to use the default Bulwark favicon.${RESET}"
+    echo -e "    ${DIM}Leave blank to use the default NuwaMail favicon.${RESET}"
     prompt_value "Favicon URL" "$CFG_FAVICON_URL" "CFG_FAVICON_URL"
     echo ""
     echo -e "    ${DIM}Source image for PWA icons (192×192 and 512×512 are auto-generated).${RESET}"
@@ -848,7 +848,7 @@ screen_login_customization() {
     prompt_value "App logo URL (dark mode)" "$CFG_APP_LOGO_DARK_URL" "CFG_APP_LOGO_DARK_URL"
     echo ""
     echo -e "    ${DIM}Custom logo URLs for the login page (SVG recommended, 32×32 to 512×512px)${RESET}"
-    echo -e "    ${DIM}Leave blank to use the default Bulwark logo.${RESET}"
+    echo -e "    ${DIM}Leave blank to use the default NuwaMail logo.${RESET}"
     prompt_value "Login logo URL (light mode)" "$CFG_LOGIN_LOGO_LIGHT_URL" "CFG_LOGIN_LOGO_LIGHT_URL"
     echo ""
     prompt_value "Login logo URL (dark mode)" "$CFG_LOGIN_LOGO_DARK_URL" "CFG_LOGIN_LOGO_DARK_URL"
@@ -866,7 +866,7 @@ screen_login_customization() {
     echo ""
 
     echo -e "  ${BOLD}Extension Directory${RESET}"
-    echo -e "    ${DIM}URL of the BulwarkMail extension directory for the admin marketplace.${RESET}"
+    echo -e "    ${DIM}URL of the NuwaMail extension directory for the admin marketplace.${RESET}"
     echo -e "    ${DIM}Set this to enable browsing and installing plugins/themes.${RESET}"
     echo -e "    ${DIM}Leave blank to disable the marketplace.${RESET}"
     prompt_value "Extension directory URL" "$CFG_EXTENSION_DIRECTORY_URL" "CFG_EXTENSION_DIRECTORY_URL"
@@ -885,7 +885,7 @@ screen_deployment() {
     draw_header
 
     section_header 6 "Deployment Method" \
-        "Choose how you want to run Bulwark Webmail."
+        "Choose how you want to run NuwaMail."
 
     local docker_available=false
     command -v docker &>/dev/null && docker_available=true
@@ -1071,7 +1071,7 @@ write_env_file() {
 
     cat > "$ENV_FILE" << ENVEOF
 # =============================================================================
-# Bulwark Webmail -- Configuration
+# NuwaMail -- Configuration
 # Generated by setup.sh on $(date '+%Y-%m-%d %H:%M:%S')
 # =============================================================================
 
@@ -1124,15 +1124,15 @@ ENVEOF
     cat >> "$ENV_FILE" << ENVEOF
 
 # -- Anonymous Telemetry -------------------------------------------------------
-# Opt-in, anonymous heartbeats (no PII). Off by default; helps improve Bulwark.
+# Opt-in, anonymous heartbeats (no PII). Off by default; helps improve NuwaMail.
 # Toggleable later in the admin UI unless this is set. See
-# https://bulwarkmail.org/docs/legal/privacy/telemetry
+# https://nuwamail.com/docs/legal/privacy/telemetry
 ENVEOF
 
     if [[ "$CFG_TELEMETRY" == "true" ]]; then
-        echo "BULWARK_TELEMETRY=on" >> "$ENV_FILE"
+        echo "NUWAMAIL_TELEMETRY=on" >> "$ENV_FILE"
     else
-        echo "# BULWARK_TELEMETRY=on" >> "$ENV_FILE"
+        echo "# NUWAMAIL_TELEMETRY=on" >> "$ENV_FILE"
     fi
 
     cat >> "$ENV_FILE" << ENVEOF
@@ -1209,7 +1209,7 @@ run_deployment() {
                 echo -e "    ${DIM}[dry-run] Would start: npm start (port ${CFG_PORT})${RESET}"
                 ;;
             "docker")
-                echo -e "    ${DIM}[dry-run] Would run:  docker pull ghcr.io/bulwarkmail/webmail:latest${RESET}"
+                echo -e "    ${DIM}[dry-run] Would run:  docker pull ghcr.io/nuwamail/webmail:latest${RESET}"
                 echo -e "    ${DIM}[dry-run] Would start: container on port ${CFG_PORT}${RESET}"
                 ;;
             "compose")
@@ -1246,8 +1246,8 @@ run_deployment() {
         "docker")
             echo -e "  ${BOLD}Pulling Docker image...${RESET}"
             echo ""
-            (docker pull ghcr.io/bulwarkmail/webmail:latest 2>&1) &
-            spinner $! "Pulling ghcr.io/bulwarkmail/webmail:latest"
+            (docker pull ghcr.io/nuwamail/webmail:latest 2>&1) &
+            spinner $! "Pulling ghcr.io/nuwamail/webmail:latest"
 
             echo ""
             echo -e "    ${OK} Image pulled!"
@@ -1255,11 +1255,11 @@ run_deployment() {
             echo -e "  ${BOLD}To run the container:${RESET}"
             echo ""
             echo -e "    ${CYAN}docker run -d \\${RESET}"
-            echo -e "    ${CYAN}  --name bulwark-webmail \\${RESET}"
+            echo -e "    ${CYAN}  --name nuwamail-webmail \\${RESET}"
             echo -e "    ${CYAN}  -p ${CFG_PORT}:3000 \\${RESET}"
             echo -e "    ${CYAN}  --env-file .env.local \\${RESET}"
             echo -e "    ${CYAN}  --restart unless-stopped \\${RESET}"
-            echo -e "    ${CYAN}  ghcr.io/bulwarkmail/webmail:latest${RESET}"
+            echo -e "    ${CYAN}  ghcr.io/nuwamail/webmail:latest${RESET}"
             ;;
 
         "compose")
@@ -1319,7 +1319,7 @@ screen_complete() {
     echo ""
     hr
     echo ""
-    print_center "${DIM}Thank you for using Bulwark Webmail!${RESET}"
+    print_center "${DIM}Thank you for using NuwaMail!${RESET}"
     echo ""
 }
 
@@ -1384,7 +1384,7 @@ load_existing_config() {
     get_env_val "SESSION_SECRET";           [[ -n "$val" ]] && CFG_SESSION_SECRET="$val"
     get_env_val "SETTINGS_SYNC_ENABLED";    [[ -n "$val" ]] && CFG_SETTINGS_SYNC_ENABLED="$val"
     get_env_val "SETTINGS_DATA_DIR";        [[ -n "$val" ]] && CFG_SETTINGS_DATA_DIR="$val"
-    get_env_val "BULWARK_TELEMETRY"
+    get_env_val "NUWAMAIL_TELEMETRY"
     case "$(echo "$val" | tr '[:upper:]' '[:lower:]')" in
         on|true|1|yes)  CFG_TELEMETRY="true" ;;
         off|false|0|no) CFG_TELEMETRY="false" ;;
@@ -1407,7 +1407,7 @@ elif [[ -r /dev/tty ]] 2>/dev/null && (echo < /dev/tty) 2>/dev/null; then
 else
     echo "Error: No interactive terminal available."
     echo "Download and run the script directly instead:"
-    echo "  curl -fsSL https://raw.githubusercontent.com/bulwarkmail/webmail/main/setup.sh -o setup.sh"
+    echo "  curl -fsSL https://raw.githubusercontent.com/nuwamail/webmail/main/setup.sh -o setup.sh"
     echo "  bash setup.sh --dry-run"
     exit 1
 fi

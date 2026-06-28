@@ -1,14 +1,14 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="public/branding/Bulwark_Logo_with_Lettering_White_and_Color.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="public/branding/Bulwark_Logo_with_Lettering_Dark_Color.svg" />
-  <img src="public/branding/Bulwark_Logo_with_Lettering_Dark_Color.svg" alt="Bulwark Webmail" width="280" />
+  <source media="(prefers-color-scheme: dark)" srcset="public/branding/Nuwamail_Logo_with_Lettering_White_and_Color.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="public/branding/Nuwamail_Logo_with_Lettering_Dark_and_Color.svg" />
+  <img src="public/branding/Nuwamail_Logo_with_Lettering_Dark_and_Color.svg" alt="NuwaMail" width="280" />
 </picture>
 
 </div>
 
-# Contributing to Bulwark Webmail
+# Contributing to NuwaMail
 
 We're writing the webmail we wanted in 2026 and didn't find. Modern protocol, modern tooling, modern UI. Not a SaaS. Not a startup. Not for sale.
 
@@ -22,7 +22,7 @@ You don't need to be an expert to contribute. Whether you're setting up your dev
 - **Share ideas** - feature suggestions, design feedback, doc improvements
 - **Collaborate** - meet the team and other contributors
 
-[**Join the Bulwark Discord Server**](https://discord.gg/tYCujymGrT)
+[**Join the NuwaMail Discord Server**](https://discord.gg/tYCujymGrT)
 
 ---
 
@@ -33,7 +33,7 @@ You don't need to be an expert to contribute. Whether you're setting up your dev
 1. **Fork and clone** the repository:
 
    ```bash
-   git clone https://github.com/bulwarkmail/webmail.git
+   git clone https://github.com/finalverse/webmail.git
    cd webmail
    ```
 
@@ -203,7 +203,7 @@ webmail/
 - **Never commit secrets** - API keys, passwords, tokens, `.env*` files
 - **Sanitize user input** and email content
 - **Block external content** by default - privacy is the point
-- **Report vulnerabilities privately** to bulwark@rbm.systems, not via public issues
+- **Report vulnerabilities privately** to hello@nuwamail.com, not via public issues
 
 ## Questions?
 
