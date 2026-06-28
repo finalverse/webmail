@@ -26,7 +26,7 @@ LABEL org.opencontainers.image.description="Modern webmail client built with Nex
 LABEL org.opencontainers.image.source="https://github.com/finalverse/webmail"
 LABEL org.opencontainers.image.url="https://github.com/finalverse/webmail"
 LABEL org.opencontainers.image.licenses="AGPL-3.0-only"
-LABEL org.opencontainers.image.vendor="rbm.systems"
+LABEL org.opencontainers.image.vendor="Finalverse"
 
 WORKDIR /app
 ENV NODE_ENV=production
