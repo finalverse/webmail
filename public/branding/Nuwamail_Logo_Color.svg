@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 693.98">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 183.51px;
+      }
+
+      .cls-1, .cls-2 {
+        font-family: Impact, Impact;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: #ed1c24;
+      }
+
+      .cls-2 {
+        font-size: 305.86px;
+      }
+
+      .cls-3 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <polygon class="cls-3" points="242.16 392.49 0 634.65 92.02 242.35 242.16 392.49"/>
+      <polygon class="cls-3" points="242.23 392.31 484.39 634.47 634.54 0 242.23 392.31"/>
+      <text class="cls-1" transform="translate(523.62 634.76) scale(1.34 .98) skewX(-9.19)"><tspan x="0" y="0">uwa</tspan></text>
+      <text class="cls-2" transform="translate(533.02 493.77) scale(1.34 .98) skewX(-9.19)"><tspan x="0" y="0">ail</tspan></text>
+    </g>
+  </g>
+</svg>
